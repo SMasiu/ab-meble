@@ -32,5 +32,14 @@ module.exports = {
 		// `gatsby-plugin-offline`,
 		`gatsby-plugin-typescript`,
 		`gatsby-plugin-styled-components`,
+		{
+			resolve: `gatsby-plugin-google-fonts`,
+			options: {
+				fonts: [
+					`Montserrat`, // you can also specify font weights and styles
+				],
+				display: 'swap',
+			},
+		},
 	],
 }
