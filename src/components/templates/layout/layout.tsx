@@ -6,6 +6,7 @@
  */
 
 import React from 'react'
+import { Header } from 'components/organisms/header/header'
 
 interface LayoutProps {
 	children: React.ReactNode
@@ -14,6 +15,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
 	return (
 		<div>
+			<Header />
 			<main>{children}</main>
 		</div>
 	)
