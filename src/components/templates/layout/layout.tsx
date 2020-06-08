@@ -7,6 +7,9 @@
 
 import React from 'react'
 import { Header } from 'components/organisms/header/header'
+import { GlobalStyles } from 'styles/global-styles'
+import { ThemeProvider } from 'styled-components'
+import { theme } from 'styles/theme'
 
 interface LayoutProps {
 	children: React.ReactNode
@@ -15,8 +18,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
 	return (
 		<div>
-			<Header />
-			<main>{children}</main>
+			<ThemeProvider theme={theme}>
+				<GlobalStyles />
+				<Header />
+				<main>{children}</main>
+			</ThemeProvider>
 		</div>
 	)
 }
