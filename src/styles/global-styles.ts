@@ -14,9 +14,14 @@ export const GlobalStyles = createGlobalStyle`
 			}
 
 			body {
+				font-family: 'Montserrat', sans-serif;
 				font-size: ${theme.fontSizes.medium};
 				color: ${theme.colors.dark300};
 				background-color: ${theme.colors.light100};
+			}
+
+			img {
+				width: 100%;
 			}
 		`}
 `
