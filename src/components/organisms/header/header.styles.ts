@@ -11,3 +11,12 @@ export const HeaderWrapper = styled.header`
 	align-items: center;
 	justify-content: space-between;
 `
+
+export const HeaderNavWrapper = styled.div`
+	display: flex;
+	align-items: center;
+`
+
+export const HeaderHamburgerWrapper = styled.div`
+	margin-left: 15px;
+`
