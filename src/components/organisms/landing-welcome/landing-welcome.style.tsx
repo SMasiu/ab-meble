@@ -20,7 +20,7 @@ export const WelcomeArticleWrapper = styled.div`
 	left: 20%;
 	top: 0;
 	${({ theme }: ThemeProps) => css`
-		background-color: ${theme.colors.light100 + 'aa'};
+		background-color: ${theme.colors.light100 + '55'};
 	`}
 `
 
@@ -111,4 +111,17 @@ export const Letter = styled.div`
 	mix-blend-mode: difference;
 	text-shadow: 1px 1px #222, -1px -1px #333;
 	font-family: 'Comfortaa', cursive;
+`
+
+export const MoveToNextWrapper = styled.div`
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 5px;
+	border-radius: 50%;
+	${({ theme }: ThemeProps) => css`
+		background-color: ${theme.colors.light300};
+		border: solid 4px ${theme.colors.light100};
+	`}
 `
