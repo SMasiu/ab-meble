@@ -1,5 +1,6 @@
 import React from 'react'
 import { WelcomeInfoWrapper, WelcomeInfoHeading } from './welcome-info.style'
+import { ArrowButton } from 'components/atoms/arrow-button/arrow-button'
 
 interface WelcomeInfoProps {
 	heading: string
@@ -13,5 +14,6 @@ export const WelcomeInfo: React.FC<WelcomeInfoProps> = ({
 	<WelcomeInfoWrapper>
 		<WelcomeInfoHeading>{heading}</WelcomeInfoHeading>
 		<p>{paragraph}</p>
+		<ArrowButton />
 	</WelcomeInfoWrapper>
 )

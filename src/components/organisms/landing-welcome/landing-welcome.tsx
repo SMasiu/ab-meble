@@ -16,7 +16,7 @@ import {
 } from './landing-welcome.style'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
-export const LandingWelcome = () => (
+export const LandingWelcome: React.FC = () => (
 	<WelcomeWrapper>
 		<CoverImageWrapper></CoverImageWrapper>
 		<WelcomeArticleWrapper>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavbarWrapper, NavbarLink, NavbarItem } from './navbar.styles'
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
 	const navbarItems = [
 		{
 			name: 'Home',
