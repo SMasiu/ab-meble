@@ -1,4 +1,5 @@
 import React from 'react'
+import { WelcomeInfoWrapper, WelcomeInfoHeading } from './welcome-info.style'
 
 interface WelcomeInfoProps {
 	heading: string
@@ -9,8 +10,8 @@ export const WelcomeInfo: React.FC<WelcomeInfoProps> = ({
 	heading,
 	paragraph,
 }) => (
-	<section>
-		<h3>{heading}</h3>
+	<WelcomeInfoWrapper>
+		<WelcomeInfoHeading>{heading}</WelcomeInfoHeading>
 		<p>{paragraph}</p>
-	</section>
+	</WelcomeInfoWrapper>
 )

@@ -80,11 +80,11 @@ export const InfoSectionWrapper = styled.div`
 `
 
 export const InfoSection = styled.section`
-	padding: 60px 150px;
+	padding: 80px 150px 40px 150px;
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 52px;
+	gap: 53px;
 `
 
 export const LetterWrapper = styled.aside`
