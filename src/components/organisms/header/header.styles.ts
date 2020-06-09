@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderWrapper = styled.header`
+	z-index: 10000;
 	position: fixed;
 	top: 0;
 	width: 100vw;

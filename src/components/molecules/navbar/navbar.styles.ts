@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
 
 export const NavbarWrapper = styled.ul`
@@ -10,5 +10,7 @@ export const NavbarItem = styled.li``
 
 export const NavbarLink = styled.a`
 	padding: 20px 30px;
-	font-size: ${({ theme }: ThemeProps) => theme.fontSizes.large};
+	${({ theme }: ThemeProps) => css`
+		font-size: ${theme.fontSizes.extraLarge};
+	`}
 `
