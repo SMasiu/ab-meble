@@ -17,6 +17,7 @@ export interface ThemeFontSizes {
 	small: string
 	medium: string
 	large: string
+	extraLarge: string
 }
 
 export interface Theme {
@@ -47,4 +48,5 @@ export enum ThemeFontSizeNames {
 	small = 'small',
 	medium = 'medium',
 	large = 'large',
+	extraLarge = 'extraLarge',
 }

@@ -19,5 +19,6 @@ export const theme: Theme = {
 		small: '1.4rem',
 		medium: '1.6rem',
 		large: '1.8rem',
+		extraLarge: '2rem',
 	},
 }
