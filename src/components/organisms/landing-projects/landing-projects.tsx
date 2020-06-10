@@ -1,23 +1,23 @@
 import React from 'react'
 import {
-	LandingAboutWrapper,
+	LandingProjectsWrapper,
 	ItemsSectionWrapperLeft,
 	ItemsSectionWrapperRight,
 	ContentWrapper,
 	ImageWrapper,
 	ArticleWrapper,
 	ArticleHeading,
-	LandingAboutOuterWrapper,
-	AboutBackground,
+	LandingProjectsOuterWrapper,
+	ProjectsBackground,
 } from './landing-about.styles'
 import { LineThrough } from 'components/atoms/line-through/line-through'
 import { ThemeColorNames } from 'types/theme.types'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
-export const LandingAbout = () => (
-	<LandingAboutOuterWrapper>
-		<AboutBackground />
-		<LandingAboutWrapper>
+export const LandingProjects = () => (
+	<LandingProjectsOuterWrapper>
+		<ProjectsBackground />
+		<LandingProjectsWrapper>
 			<ItemsSectionWrapperLeft>
 				<ContentWrapper>
 					<ArticleWrapper>
@@ -67,6 +67,6 @@ export const LandingAbout = () => (
 					</ArticleWrapper>
 				</ContentWrapper>
 			</ItemsSectionWrapperRight>
-		</LandingAboutWrapper>
-	</LandingAboutOuterWrapper>
+		</LandingProjectsWrapper>
+	</LandingProjectsOuterWrapper>
 )

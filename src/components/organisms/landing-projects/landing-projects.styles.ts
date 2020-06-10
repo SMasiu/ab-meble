@@ -5,7 +5,7 @@ type ImageWrapperProps = {
 	url: string
 } & ThemeProps
 
-export const LandingAboutOuterWrapper = styled.div`
+export const LandingProjectsOuterWrapper = styled.div`
 	height: 200vh;
 	min-height: 1600px;
 	position: relative;
@@ -14,7 +14,7 @@ export const LandingAboutOuterWrapper = styled.div`
 	`}
 `
 
-export const LandingAboutWrapper = styled.section`
+export const LandingProjectsWrapper = styled.section`
 	z-index: 5000;
 	position: relative;
 	width: 1800px;
@@ -73,14 +73,14 @@ export const ArticleHeading = styled.h1`
 	font-size: 6rem;
 `
 
-export const AboutBackground = styled.section`
+export const ProjectsBackground = styled.section`
 	z-index: 4000;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	width: 100%;
 	height: 600px;
-	background-image: url('/about-cover.jpg');
+	background-image: url('/projects-cover.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 `
