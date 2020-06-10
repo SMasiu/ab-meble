@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderWrapper = styled.header`
-	z-index: 10000;
+	z-index: 9000;
 	position: fixed;
 	top: 0;
 	width: 100vw;
@@ -17,6 +17,11 @@ export const HeaderNavWrapper = styled.div`
 	align-items: center;
 `
 
+export const LogoWrapper = styled.div`
+	z-index: 11000;
+`
+
 export const HeaderHamburgerWrapper = styled.div`
 	margin-left: 15px;
+	z-index: 11000;
 `

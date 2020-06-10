@@ -1,19 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Logo } from 'components/atoms/logo/logo'
 import { Navbar } from 'components/molecules/navbar/navbar'
-import { HeaderWrapper, HeaderNavWrapper, HeaderHamburgerWrapper } from './header.styles'
+import {
+	HeaderWrapper,
+	HeaderNavWrapper,
+	HeaderHamburgerWrapper,
+	LogoWrapper,
+} from './header.styles'
 import { HamburgerMenu } from 'components/atoms/hamburger-menu/hamburger-menu'
+import { ExpandNav } from 'components/molecules/expand-nav/expand-nav'
 
 export const Header: React.FC = () => {
+	const [openMenu, setOpenMenu] = useState(false)
+
+	const hangleHabmurgerClick = () => setOpenMenu(!openMenu)
+
 	return (
 		<HeaderWrapper>
-			<Logo />
+			<LogoWrapper>
+				<Logo />
+			</LogoWrapper>
 			<HeaderNavWrapper>
 				<Navbar />
 				<HeaderHamburgerWrapper>
-					<HamburgerMenu />
+					<HamburgerMenu onClick={hangleHabmurgerClick} open={openMenu} />
 				</HeaderHamburgerWrapper>
 			</HeaderNavWrapper>
+			<ExpandNav open={openMenu} />
 		</HeaderWrapper>
 	)
 }

@@ -7,6 +7,7 @@ export const WelcomeWrapper = styled.section`
 
 export const CoverImageWrapper = styled.figure`
 	height: 100vh;
+	min-height: 800px;
 	background-image: url('/welcome.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -15,7 +16,7 @@ export const CoverImageWrapper = styled.figure`
 
 export const WelcomeArticleWrapper = styled.div`
 	width: 800px;
-	height: 100vh;
+	height: 100%;
 	position: absolute;
 	left: 20%;
 	top: 0;
