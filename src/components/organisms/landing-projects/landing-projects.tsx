@@ -9,7 +9,7 @@ import {
 	ArticleHeading,
 	LandingProjectsOuterWrapper,
 	ProjectsBackground,
-} from './landing-about.styles'
+} from './landing-projects.styles'
 import { LineThrough } from 'components/atoms/line-through/line-through'
 import { ThemeColorNames } from 'types/theme.types'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
