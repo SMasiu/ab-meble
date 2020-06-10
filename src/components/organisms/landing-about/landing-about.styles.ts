@@ -1,16 +1,86 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { ThemeProps } from 'types/theme.types'
+
+type ImageWrapperProps = {
+	url: string
+} & ThemeProps
+
+export const LandingAboutOuterWrapper = styled.div`
+	height: 200vh;
+	min-height: 1600px;
+	position: relative;
+	${({ theme }: ThemeProps) => css`
+		border-top: solid 4px ${theme.colors.light300};
+	`}
+`
 
 export const LandingAboutWrapper = styled.section`
-	width: 1400px;
+	z-index: 5000;
+	position: relative;
+	width: 1800px;
+	height: 100%;
 	margin: auto;
-	height: 100vh;
-	min-height: 800px;
 	display: grid;
 	grid-template-columns: 800px 1fr;
+	gap: 50px;
 `
 
-export const AboutArticle = styled.article`
+export const ItemsSectionWrapper = styled.section`
+	height: 100%;
+	display: grid;
+	gap: 25px;
+`
+
+export const ItemsSectionWrapperLeft = styled(ItemsSectionWrapper)`
+	grid-template-columns: 1fr 400px;
+`
+
+export const ItemsSectionWrapperRight = styled(ItemsSectionWrapper)`
+	grid-template-columns: 400px 1fr;
+`
+
+export const ContentWrapper = styled.div`
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 `
 
-export const ImagesArticle = styled.article``
+export const ImageWrapper = styled.figure<ImageWrapperProps>`
+	position: relative;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	background-size: cover;
+
+	${({ theme }: ThemeProps) => css`
+		border: solid 8px ${theme.colors.light300};
+	`}
+
+	${({ url }: ImageWrapperProps) => css`
+		background-image: url(${url});
+	`}
+`
+
+export const ArticleWrapper = styled.article`
+	height: 400px;
+	display: flex;
+	align-items: center;
+`
+
+export const ArticleHeading = styled.h1`
+	font-size: 6rem;
+`
+
+export const AboutBackground = styled.section`
+	z-index: 4000;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 600px;
+	background-image: url('/about-cover.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+`

@@ -1,4 +1,4 @@
-import { Theme } from 'types/theme.types'
+import { Theme, ThemeColorNames } from 'types/theme.types'
 
 export const theme: Theme = {
 	colors: {
@@ -21,4 +21,5 @@ export const theme: Theme = {
 		large: '1.8rem',
 		extraLarge: '2rem',
 	},
+	getColor: (name: ThemeColorNames) => theme.colors[name],
 }

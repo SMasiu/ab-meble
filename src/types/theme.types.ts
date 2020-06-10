@@ -23,6 +23,7 @@ export interface ThemeFontSizes {
 export interface Theme {
 	colors: ThemeColors
 	fontSizes: ThemeFontSizes
+	getColor: (name: ThemeColorNames) => string
 }
 
 export interface ThemeProps {

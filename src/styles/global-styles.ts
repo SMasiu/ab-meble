@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
 				color: ${theme.colors.dark300};
 				background-color: ${theme.colors.light100};
 
-				&::-webkit-scrollbar-track 
+				&::-webkit-scrollbar-track {
 					border-radius: 10px;
 					background-color: transparent;
 				}
