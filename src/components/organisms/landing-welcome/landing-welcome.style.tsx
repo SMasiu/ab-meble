@@ -2,10 +2,6 @@ import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
 
 export const WelcomeWrapper = styled.section`
-	position: relative;
-`
-
-export const CoverImageWrapper = styled.figure`
 	height: 100vh;
 	min-height: 800px;
 	background-image: url('/welcome.jpg');
@@ -14,12 +10,15 @@ export const CoverImageWrapper = styled.figure`
 	background-position: center;
 `
 
+export const WelcomeArticleOuterWrapper = styled.div`
+	width: 1400px;
+	margin: auto;
+	height: 100%;
+`
+
 export const WelcomeArticleWrapper = styled.div`
 	width: 800px;
 	height: 100%;
-	position: absolute;
-	left: 20%;
-	top: 0;
 	${({ theme }: ThemeProps) => css`
 		background-color: ${theme.colors.light100 + '55'};
 	`}
@@ -60,17 +59,6 @@ export const Heading = styled.h1`
 export const SubHeading = styled.h2`
 	font-size: 3rem;
 	font-weight: 400;
-`
-
-export const LineThrough = styled.div`
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 100%;
-	width: 8px;
-	${({ theme }: ThemeProps) => css`
-		background-color: ${theme.colors.light100};
-	`}
 `
 
 export const InfoSectionWrapper = styled.div`

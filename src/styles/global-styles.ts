@@ -18,6 +18,22 @@ export const GlobalStyles = createGlobalStyle`
 				font-size: ${theme.fontSizes.medium};
 				color: ${theme.colors.dark300};
 				background-color: ${theme.colors.light100};
+
+				&::-webkit-scrollbar-track 
+					border-radius: 10px;
+					background-color: transparent;
+				}
+
+				&::-webkit-scrollbar {
+					width: 6px;
+					background-color: ${theme.colors.light100};
+				}
+
+				&::-webkit-scrollbar-thumb {
+					border-right: 2px solid ${theme.colors.light100};
+					border-radius: 10px;
+					background-color: ${theme.colors.dark100};
+				}
 			}
 
 			img {
