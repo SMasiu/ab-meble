@@ -11,10 +11,10 @@ export const GlobalStyles = createGlobalStyle`
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
+				font-family: 'Montserrat', sans-serif;
 			}
 
 			body {
-				font-family: 'Montserrat', sans-serif;
 				font-size: ${theme.fontSizes.medium};
 				color: ${theme.colors.dark300};
 				background-color: ${theme.colors.light100};
@@ -38,6 +38,12 @@ export const GlobalStyles = createGlobalStyle`
 
 			img {
 				width: 100%;
+			}
+
+			button,
+			input,
+			textarea {
+				font-family: 'Montserrat', sans-serif;
 			}
 		`}
 `

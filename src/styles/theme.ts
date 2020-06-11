@@ -2,9 +2,9 @@ import { Theme, ThemeColorNames } from 'types/theme.types'
 
 export const theme: Theme = {
 	colors: {
-		primary100: '',
-		primary200: '',
-		primary300: '',
+		primary100: '#dbdbdb',
+		primary200: '#d6d6d6',
+		primary300: '#8a8a8a',
 		secondary100: '',
 		secondary200: '',
 		secondary300: '',
