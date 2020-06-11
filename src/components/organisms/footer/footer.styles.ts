@@ -20,11 +20,14 @@ export const FooterWrapper = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 `
 
-export const ContactData = styled.section`
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+export const ContactData = styled.section``
+
+export const ContactDataSection = styled.article`
+	margin-bottom: 60px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 `
 
 export const ContactForm = styled.section``
