@@ -71,6 +71,7 @@ export const ArticleWrapper = styled.article`
 
 export const ArticleHeading = styled.h1`
 	font-size: 6rem;
+	font-family: 'Comfortaa', cursive;
 `
 
 export const ProjectsBackground = styled.section`

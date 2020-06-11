@@ -10,6 +10,7 @@ import { Header } from 'components/organisms/header/header'
 import { GlobalStyles } from 'styles/global-styles'
 import { ThemeProvider } from 'styled-components'
 import { theme } from 'styles/theme'
+import { Footer } from 'components/organisms/footer/footer'
 
 interface LayoutProps {
 	children: React.ReactNode
@@ -22,6 +23,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<GlobalStyles />
 				<Header />
 				<main>{children}</main>
+				<Footer />
 			</ThemeProvider>
 		</div>
 	)
