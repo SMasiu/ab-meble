@@ -52,11 +52,13 @@ export const HeaderWrapper = styled.header`
 `
 
 export const Heading = styled.h1`
+	font-family: inherit;
 	font-size: 8rem;
 	font-weight: 400;
 `
 
 export const SubHeading = styled.h2`
+	font-family: inherit;
 	font-size: 3rem;
 	font-weight: 400;
 `
