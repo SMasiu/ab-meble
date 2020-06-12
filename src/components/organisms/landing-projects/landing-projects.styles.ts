@@ -72,13 +72,16 @@ export const ArticleHeading = styled.h1`
 	font-family: 'Comfortaa', cursive;
 `
 
-export const ProjectsBackground = styled.section`
+export const ProjectsBackgroundWrapper = styled.div`
 	z-index: 4000;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: calc(50% - 300px);
 	width: 100%;
 	height: 600px;
+`
+
+export const ProjectsBackground = styled.section`
+	height: 100%;
 	background-attachment: fixed;
 	background-image: url('/projects-cover.jpg');
 	background-size: cover;

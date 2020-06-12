@@ -10,6 +10,7 @@ import {
 	LandingProjectsOuterWrapper,
 	ProjectsBackground,
 	HalfLineThrough,
+	ProjectsBackgroundWrapper,
 } from './landing-projects.styles'
 import { LineThrough } from 'components/atoms/line-through/line-through'
 import { ThemeColorNames } from 'types/theme.types'
@@ -17,7 +18,9 @@ import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
 export const LandingProjects = () => (
 	<LandingProjectsOuterWrapper>
-		<ProjectsBackground />
+		<ProjectsBackgroundWrapper>
+			<ProjectsBackground />
+		</ProjectsBackgroundWrapper>
 		<LandingProjectsWrapper>
 			<ItemsSectionWrapperLeft>
 				<ContentWrapper>
