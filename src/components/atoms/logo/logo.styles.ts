@@ -1,17 +1,13 @@
 import styled from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
 
-export const LogoWrapper = styled.div`
-	display: flex;
-	align-items: flex-end;
-`
+type LogoABProps = {
+	expanded: boolean
+} & ThemeProps
 
-export const LogoAB = styled.figure`
-	width: 75px;
-`
-
-export const LogoName = styled.p`
-	font-size: ${({ theme }: ThemeProps) => theme.fontSizes.extraLarge};
-	font-family: 'Comfortaa', cursive;
-	margin-bottom: 3px;
+export const LogoAB = styled.figure<LogoABProps>`
+	transition: width 0.2s;
+	will-change: width;
+	margin-bottom: -4px;
+	width: ${({ expanded }) => `${expanded ? 75 : 50}px`};
 `

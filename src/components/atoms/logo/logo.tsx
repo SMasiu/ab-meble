@@ -1,11 +1,12 @@
 import React from 'react'
-import { LogoWrapper, LogoAB, LogoName } from './logo.styles'
+import { LogoAB } from './logo.styles'
 
-export const Logo: React.FC = () => (
-	<LogoWrapper>
-		<LogoAB>
-			<img src={'/logo.svg'} alt="logo" />
-		</LogoAB>
-		<LogoName>Meble</LogoName>
-	</LogoWrapper>
+interface LogoProps {
+	expanded: boolean
+}
+
+export const Logo: React.FC<LogoProps> = ({ expanded }) => (
+	<LogoAB expanded={expanded}>
+		<img src={'/logo.svg'} alt="logo" />
+	</LogoAB>
 )

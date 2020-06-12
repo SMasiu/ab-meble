@@ -1,15 +1,28 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { ThemeProps } from 'types/theme.types'
 
-export const HeaderWrapper = styled.header`
+type HeaderWrapperProps = {
+	expandedNav: boolean
+} & ThemeProps
+
+export const HeaderWrapper = styled.header<HeaderWrapperProps>`
 	z-index: 9000;
 	position: fixed;
 	top: 0;
 	width: 100vw;
-	min-height: 75px;
-	padding: 5px 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	transition-duration: 0.2s;
+	transition-property: padding background-color;
+	will-change: background-color;
+	padding: 10px 20px;
+
+	${({ theme, expandedNav }: HeaderWrapperProps) =>
+		!expandedNav &&
+		css`
+			background-color: ${theme.colors.light100};
+		`}
 `
 
 export const HeaderNavWrapper = styled.div`

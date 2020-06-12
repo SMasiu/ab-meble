@@ -9,16 +9,17 @@ import {
 } from './header.styles'
 import { HamburgerMenu } from 'components/atoms/hamburger-menu/hamburger-menu'
 import { ExpandNav } from 'components/molecules/expand-nav/expand-nav'
+import { useScrollNav } from 'hooks/use-scroll-nav'
 
 export const Header: React.FC = () => {
 	const [openMenu, setOpenMenu] = useState(false)
-
+	const expandedNav = useScrollNav()
 	const hangleHabmurgerClick = () => setOpenMenu(!openMenu)
 
 	return (
-		<HeaderWrapper>
+		<HeaderWrapper expandedNav={expandedNav}>
 			<LogoWrapper>
-				<Logo />
+				<Logo expanded={expandedNav} />
 			</LogoWrapper>
 			<HeaderNavWrapper>
 				<Navbar />
