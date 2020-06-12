@@ -12,7 +12,7 @@ import { Submit } from 'components/atoms/submit/submit'
 export const FooterContactForm = () => (
 	<FormWrapper>
 		<InputGroup>
-			<InputLabel htmlFor="name">Imię</InputLabel>
+			<InputLabel htmlFor="name">Imię i Nazwisko</InputLabel>
 			<Input id="name" placeholder="Twoje imię" />
 		</InputGroup>
 		<InputGroup>
