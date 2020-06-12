@@ -5,6 +5,7 @@ export const WelcomeWrapper = styled.section`
 	height: 100vh;
 	min-height: 800px;
 	background-image: url('/welcome.jpg');
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -20,7 +21,7 @@ export const WelcomeArticleWrapper = styled.div`
 	width: 800px;
 	height: 100%;
 	${({ theme }: ThemeProps) => css`
-		background-color: ${theme.colors.light100 + '55'};
+		background-color: ${theme.colors.light100 + '88'};
 	`}
 `
 
@@ -47,7 +48,7 @@ export const HeaderWrapper = styled.header`
 	font-family: 'Comfortaa', cursive;
 	${({ theme }: ThemeProps) => css`
 		background-color: ${theme.colors.light300};
-		border: solid 8px ${theme.colors.light100};
+		border: solid 4px ${theme.colors.light100};
 	`}
 `
 

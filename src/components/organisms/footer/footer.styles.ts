@@ -42,3 +42,9 @@ export const CopyRight = styled.p`
 		font-size: ${theme.fontSizes.small};
 	`}
 `
+
+export const FooterHeading = styled.h2`
+	${({ theme }: ThemeProps) => css`
+		font-size: ${theme.fontSizes.extraLarge};
+	`}
+`

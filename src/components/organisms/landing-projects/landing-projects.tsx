@@ -9,6 +9,7 @@ import {
 	ArticleHeading,
 	LandingProjectsOuterWrapper,
 	ProjectsBackground,
+	HalfLineThrough,
 } from './landing-projects.styles'
 import { LineThrough } from 'components/atoms/line-through/line-through'
 import { ThemeColorNames } from 'types/theme.types'
@@ -32,16 +33,16 @@ export const LandingProjects = () => (
 				</ContentWrapper>
 				<ContentWrapper>
 					<LineThrough color={ThemeColorNames.light300} />
-					<ImageWrapper url={'about3.jpg'}></ImageWrapper>
-					<ImageWrapper url={'about4.jpg'}></ImageWrapper>
-					<ImageWrapper url={'about5.jpg'}></ImageWrapper>
+					<ImageWrapper url={'project3.jpg'}></ImageWrapper>
+					<ImageWrapper url={'project4.jpg'}></ImageWrapper>
+					<ImageWrapper url={'project5.jpg'}></ImageWrapper>
 				</ContentWrapper>
 			</ItemsSectionWrapperLeft>
 			<ItemsSectionWrapperRight>
 				<ContentWrapper>
-					<LineThrough color={ThemeColorNames.light300} />
-					<ImageWrapper url={'about1.jpg'}></ImageWrapper>
-					<ImageWrapper url={'about2.jpg'}></ImageWrapper>
+					<HalfLineThrough color={ThemeColorNames.light300} />
+					<ImageWrapper url={'project1.jpg'}></ImageWrapper>
+					<ImageWrapper url={'project2.jpg'}></ImageWrapper>
 				</ContentWrapper>
 				<ContentWrapper>
 					<ArticleWrapper>

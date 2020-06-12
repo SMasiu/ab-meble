@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
+import { LineThrough } from 'components/atoms/line-through/line-through'
 
 type ImageWrapperProps = {
 	url: string
@@ -9,9 +10,6 @@ export const LandingProjectsOuterWrapper = styled.div`
 	height: 200vh;
 	min-height: 1600px;
 	position: relative;
-	${({ theme }: ThemeProps) => css`
-		border-top: solid 4px ${theme.colors.light300};
-	`}
 `
 
 export const LandingProjectsWrapper = styled.section`
@@ -55,7 +53,7 @@ export const ImageWrapper = styled.figure<ImageWrapperProps>`
 	background-size: cover;
 
 	${({ theme }: ThemeProps) => css`
-		border: solid 8px ${theme.colors.light300};
+		border: solid 4px ${theme.colors.light300};
 	`}
 
 	${({ url }: ImageWrapperProps) => css`
@@ -84,4 +82,8 @@ export const ProjectsBackground = styled.section`
 	background-image: url('/projects-cover.jpg');
 	background-size: cover;
 	background-attachment: fixed;
+`
+
+export const HalfLineThrough = styled(LineThrough)`
+	height: 50%;
 `

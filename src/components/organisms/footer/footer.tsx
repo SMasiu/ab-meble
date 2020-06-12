@@ -29,7 +29,7 @@ export const Footer = () => (
 				</ContactDataSection>
 			</ContactData>
 			<ContactForm>
-				<h1>Napisz do nas</h1>
+				<h2>Napisz do nas</h2>
 
 				<FooterContactForm />
 			</ContactForm>

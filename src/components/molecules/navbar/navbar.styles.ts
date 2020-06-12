@@ -11,6 +11,6 @@ export const NavbarItem = styled.li``
 export const NavbarLink = styled.a`
 	padding: 20px 30px;
 	${({ theme }: ThemeProps) => css`
-		font-size: ${theme.fontSizes.extraLarge};
+		font-size: ${theme.fontSizes.large};
 	`}
 `

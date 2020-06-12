@@ -10,7 +10,7 @@ export const LineThrough = styled.div<LineThroughProps>`
 	left: 50%;
 	transform: translateX(-50%);
 	height: 100%;
-	width: 8px;
+	width: 4px;
 	${({ theme, color }: LineThroughProps) => css`
 		background-color: ${theme.getColor(color || ThemeColorNames.light100)};
 	`}

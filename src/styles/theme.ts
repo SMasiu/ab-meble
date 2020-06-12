@@ -19,7 +19,7 @@ export const theme: Theme = {
 		small: '1.4rem',
 		medium: '1.6rem',
 		large: '1.8rem',
-		extraLarge: '2rem',
+		extraLarge: '2.2rem',
 	},
 	getColor: (name: ThemeColorNames) => theme.colors[name],
 }
