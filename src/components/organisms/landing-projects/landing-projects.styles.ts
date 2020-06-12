@@ -79,9 +79,11 @@ export const ProjectsBackground = styled.section`
 	transform: translateY(-50%);
 	width: 100%;
 	height: 600px;
+	background-attachment: fixed;
 	background-image: url('/projects-cover.jpg');
 	background-size: cover;
-	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
 `
 
 export const HalfLineThrough = styled(LineThrough)`
