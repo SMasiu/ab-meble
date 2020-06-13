@@ -11,8 +11,11 @@ import {
 	ProjectsBackground,
 	HalfLineThrough,
 	ProjectsBackgroundWrapper,
+	ContentWrapperRightImages,
+	ContentWrapperLeftNames,
+	ContentWrapperRightDesc,
+	LeftLineThrough,
 } from './landing-projects.styles'
-import { LineThrough } from 'components/atoms/line-through/line-through'
 import { ThemeColorNames } from 'types/theme.types'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
@@ -23,7 +26,7 @@ export const LandingProjects = () => (
 		</ProjectsBackgroundWrapper>
 		<LandingProjectsWrapper>
 			<ItemsSectionWrapperLeft>
-				<ContentWrapper>
+				<ContentWrapperLeftNames>
 					<ArticleWrapper>
 						<ArticleHeading>Biura</ArticleHeading>
 					</ArticleWrapper>
@@ -33,21 +36,21 @@ export const LandingProjects = () => (
 					<ArticleWrapper>
 						<ArticleHeading>Salony</ArticleHeading>
 					</ArticleWrapper>
-				</ContentWrapper>
+				</ContentWrapperLeftNames>
 				<ContentWrapper>
-					<LineThrough color={ThemeColorNames.light300} />
+					<LeftLineThrough color={ThemeColorNames.light300} />
 					<ImageWrapper url={'project3.jpg'}></ImageWrapper>
 					<ImageWrapper url={'project4.jpg'}></ImageWrapper>
 					<ImageWrapper url={'project5.jpg'}></ImageWrapper>
 				</ContentWrapper>
 			</ItemsSectionWrapperLeft>
 			<ItemsSectionWrapperRight>
-				<ContentWrapper>
+				<ContentWrapperRightImages>
 					<HalfLineThrough color={ThemeColorNames.light300} />
 					<ImageWrapper url={'project1.jpg'}></ImageWrapper>
 					<ImageWrapper url={'project2.jpg'}></ImageWrapper>
-				</ContentWrapper>
-				<ContentWrapper>
+				</ContentWrapperRightImages>
+				<ContentWrapperRightDesc>
 					<ArticleWrapper>
 						<WelcomeInfo
 							heading={'Lorem, ipsum dolor.'}
@@ -69,7 +72,7 @@ export const LandingProjects = () => (
 							discover={'Discover'}
 						></WelcomeInfo>
 					</ArticleWrapper>
-				</ContentWrapper>
+				</ContentWrapperRightDesc>
 			</ItemsSectionWrapperRight>
 		</LandingProjectsWrapper>
 	</LandingProjectsOuterWrapper>
