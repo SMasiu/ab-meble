@@ -12,12 +12,26 @@ export const FooterOuterWrapper = styled.footer`
 	${({ theme }: ThemeProps) => css`
 		background-color: ${theme.colors.light300};
 	`};
+
+	@media screen and (max-width: 500px) {
+		padding: 70px 15px 35px 15px;
+	}
 `
 
 export const FooterWrapper = styled.div`
 	width: 1400px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+
+	@media screen and (max-width: 1500px) {
+		width: 90%;
+		margin: auto;
+	}
+
+	@media screen and (max-width: 1000px) {
+		grid-template-columns: 1fr;
+		gap: 50px;
+	}
 `
 
 export const ContactData = styled.section``

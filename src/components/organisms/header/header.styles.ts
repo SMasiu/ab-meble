@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.header<HeaderWrapperProps>`
 	align-items: center;
 	justify-content: space-between;
 	transition-duration: 0.2s;
-	transition-property: padding background-color;
+	transition-property: padding, background-color;
 	will-change: background-color;
 	padding: 10px 20px;
 
@@ -37,4 +37,10 @@ export const LogoWrapper = styled.div`
 export const HeaderHamburgerWrapper = styled.div`
 	margin-left: 15px;
 	z-index: 11000;
+`
+
+export const NavbarWrapper = styled.div`
+	@media screen and (max-width: 1000px) {
+		display: none;
+	}
 `

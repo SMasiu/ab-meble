@@ -6,6 +6,7 @@ import {
 	HeaderNavWrapper,
 	HeaderHamburgerWrapper,
 	LogoWrapper,
+	NavbarWrapper,
 } from './header.styles'
 import { HamburgerMenu } from 'components/atoms/hamburger-menu/hamburger-menu'
 import { ExpandNav } from 'components/molecules/expand-nav/expand-nav'
@@ -22,7 +23,9 @@ export const Header: React.FC = () => {
 				<Logo expanded={expandedNav} />
 			</LogoWrapper>
 			<HeaderNavWrapper>
-				<Navbar />
+				<NavbarWrapper>
+					<Navbar />
+				</NavbarWrapper>
 				<HeaderHamburgerWrapper>
 					<HamburgerMenu onClick={hangleHabmurgerClick} open={openMenu} />
 				</HeaderHamburgerWrapper>
