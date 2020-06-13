@@ -9,5 +9,5 @@ export const LogoAB = styled.figure<LogoABProps>`
 	transition: width 0.2s;
 	will-change: width;
 	margin-bottom: -4px;
-	width: ${({ expanded }) => `${expanded ? 75 : 50}px`};
+	width: ${({ expanded }) => `${expanded ? 150 : 100}px`};
 `
