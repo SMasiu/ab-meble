@@ -11,22 +11,20 @@ import {
 	LetterWrapperA,
 	LetterWrapperB,
 	Letter,
-	MoveToNextWrapper,
 	WelcomeArticleOuterWrapper,
+	WelcomeLineThrough,
 } from './landing-welcome.style'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
-import { ArrowButton } from 'components/atoms/arrow-button/arrow-button'
-import { LineThrough } from 'components/atoms/line-through/line-through'
 
 export const LandingWelcome: React.FC = () => (
 	<WelcomeWrapper>
 		<WelcomeArticleOuterWrapper>
 			<WelcomeArticleWrapper>
 				<WelcomeArticle>
-					<LineThrough />
+					<WelcomeLineThrough />
 					<HeaderWrapper>
 						<Heading>Meble</Heading>
-						<SubHeading>na wymair</SubHeading>
+						<SubHeading>biurowe</SubHeading>
 					</HeaderWrapper>
 					<InfoSectionWrapper>
 						<LetterWrapperA>
@@ -52,9 +50,6 @@ export const LandingWelcome: React.FC = () => (
 							<Letter>B</Letter>
 						</LetterWrapperB>
 					</InfoSectionWrapper>
-					<MoveToNextWrapper>
-						<ArrowButton size="23px" name="down-arrow"></ArrowButton>
-					</MoveToNextWrapper>
 				</WelcomeArticle>
 			</WelcomeArticleWrapper>
 		</WelcomeArticleOuterWrapper>

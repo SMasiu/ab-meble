@@ -1,21 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
-
-export const WelcomeWrapper = styled.section`
-	height: 100vh;
-	min-height: 800px;
-	background-image: url('/welcome.jpg');
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-`
-
-export const WelcomeArticleOuterWrapper = styled.div`
-	width: 1400px;
-	margin: auto;
-	height: 100%;
-`
+import { LineThrough } from 'components/atoms/line-through/line-through'
 
 export const WelcomeArticleWrapper = styled.div`
 	width: 800px;
@@ -105,15 +90,78 @@ export const Letter = styled.div`
 	font-family: 'Comfortaa', cursive;
 `
 
-export const MoveToNextWrapper = styled.div`
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: 5px;
-	border-radius: 50%;
-	${({ theme }: ThemeProps) => css`
-		background-color: ${theme.colors.light300};
-		border: solid 4px ${theme.colors.light100};
-	`}
+export const WelcomeLineThrough = styled(LineThrough)``
+
+export const WelcomeArticleOuterWrapper = styled.div`
+	width: 1400px;
+	margin: auto;
+	height: 100%;
+
+	@media screen and (max-width: 1500px) {
+		width: 1200px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		width: 900px;
+
+		${WelcomeArticleWrapper} {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		width: 80%;
+
+		${LetterWrapper} {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		width: 95%;
+
+		${HeaderWrapper} {
+			width: 300px;
+			height: 300px;
+		}
+
+		${Heading} {
+			font-size: 6rem;
+		}
+
+		${SubHeading} {
+			font-size: 3rem;
+		}
+	}
+`
+
+export const WelcomeWrapper = styled.section`
+	height: 100vh;
+	min-height: 900px;
+	background-image: url('/welcome.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	@media screen and (max-width: 800px) {
+		height: 100vh;
+
+		${HeaderWrapper} {
+			margin-top: 50px;
+		}
+
+		${InfoSectionWrapper} {
+			width: 100%;
+		}
+
+		${InfoSection} {
+			padding: 25px;
+			grid-template-columns: 1fr;
+		}
+
+		${WelcomeLineThrough} {
+			display: none;
+		}
+	}
 `

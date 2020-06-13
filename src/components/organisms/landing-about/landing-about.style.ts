@@ -102,7 +102,7 @@ export const AboutWrapper = styled.section`
 
 	@media screen and (max-width: 550px) {
 		${AboutImageWrapper} {
-			padding: 4px;
+			padding: 25px 4px;
 		}
 		${AboutArticleWrapper} {
 			padding: 50px 20px;
