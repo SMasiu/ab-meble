@@ -7,6 +7,7 @@ import {
 	ContactParagraph,
 	CopyRight,
 	ContactDataSection,
+	CopyRightWrapper,
 } from './footer.styles'
 import { FooterContactForm } from 'components/molecules/footer-contact-form/footer-contact-form'
 
@@ -34,6 +35,8 @@ export const Footer = () => (
 				<FooterContactForm />
 			</ContactForm>
 		</FooterWrapper>
-		<CopyRight>&copy; AB Meble 2020</CopyRight>
+		<CopyRightWrapper>
+			<CopyRight>&copy; AB Meble 2020</CopyRight>
+		</CopyRightWrapper>
 	</FooterOuterWrapper>
 )

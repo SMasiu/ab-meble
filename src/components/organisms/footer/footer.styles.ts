@@ -50,8 +50,13 @@ export const ContactParagraph = styled.p`
 	margin: 5px 0;
 `
 
+export const CopyRightWrapper = styled.div`
+	width: 100%;
+`
+
 export const CopyRight = styled.p`
 	margin-top: 35px;
+	text-align: center;
 	${({ theme }: ThemeProps) => css`
 		font-size: ${theme.fontSizes.small};
 	`}
