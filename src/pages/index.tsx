@@ -9,9 +9,9 @@ import { LandingAbout } from 'components/organisms/landing-about/landing-about'
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
-		{/* <LandingWelcome />
+		{/* <LandingWelcome /> */}
 		<LandingAbout />
-		<LandingProjects /> */}
+		{/* <LandingProjects /> */}
 	</Layout>
 )
 

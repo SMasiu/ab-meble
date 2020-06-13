@@ -4,14 +4,11 @@ import { ThemeProps } from 'types/theme.types'
 export const AboutOuterWrapper = styled.section`
 	height: 100vh;
 	min-height: 800px;
-`
+	padding: 0 50px;
 
-export const AboutWrapper = styled.section`
-	width: 1400px;
-	height: 100%;
-	margin: auto;
-	display: grid;
-	grid-template-columns: 800px 1fr;
+	@media screen and (max-width: 1000px) {
+		padding: 0;
+	}
 `
 
 export const AboutImageWrapper = styled.div`
@@ -55,4 +52,60 @@ export const ReadMore = styled.div`
 
 export const ReadMoreText = styled.p`
 	margin-right: 10px;
+`
+
+export const AboutWrapper = styled.section`
+	width: 1400px;
+	height: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 800px 1fr;
+
+	@media screen and (max-width: 1500px) {
+		width: 1200px;
+		grid-template-columns: 600px 1fr;
+	}
+
+	@media screen and (max-width: 1300px) {
+		width: 900px;
+		grid-template-columns: 500px 1fr;
+		position: relative;
+
+		${AboutImageWrapper}, ${AboutArticleWrapper} {
+			padding: 25px;
+		}
+	}
+
+	@media screen and (max-width: 1000px) {
+		display: block;
+		width: 95%;
+
+		${AboutImageWrapper} {
+			height: 100%;
+			${AboutImage} {
+				background-attachment: fixed;
+			}
+		}
+
+		${AboutArticleWrapper} {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			padding: 50px;
+
+			${({ theme }: ThemeProps) => css`
+				background-color: ${theme.colors.light300 + 'bb'};
+			`}
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		${AboutImageWrapper} {
+			padding: 4px;
+		}
+		${AboutArticleWrapper} {
+			padding: 50px 20px;
+		}
+	}
 `
