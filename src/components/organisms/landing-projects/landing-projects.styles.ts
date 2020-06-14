@@ -5,12 +5,6 @@ type ImageProps = {
 	path: string
 } & ThemeProps
 
-export const LandingProjectsOuterWrapper = styled.section`
-	min-height: 1800px;
-	height: 2vh;
-	position: relative;
-`
-
 export const LandingProjectsWrapper = styled.div`
 	position: relative;
 	height: 100%;
@@ -69,6 +63,7 @@ export const ImageWrapper2 = styled(ImageWrapper)`
 `
 
 export const ArticleWrapper = styled.article`
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -137,4 +132,129 @@ export const LineThroughRight = styled(LineThrough)`
 	height: 50%;
 	transform: translate(-50%, -50%);
 	right: 670px;
+`
+
+export const MobileBackground = styled.div`
+	display: none;
+	height: 65%;
+	width: 375px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	${({ theme }: ThemeProps) => css`
+		background-color: ${theme.colors.light300 + 'bb'};
+	`}
+`
+
+export const LandingProjectsOuterWrapper = styled.section`
+	min-height: 1800px;
+	height: 2vh;
+	position: relative;
+
+	@media screen and (max-width: 1850px) {
+		${LandingProjectsWrapper} {
+			width: 1400px;
+		}
+
+		${ImageNameWrapper} {
+			gap: 0;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		${Image} {
+			width: 300px;
+			height: 300px;
+		}
+
+		${ImageContentWrapper1} {
+			top: 300px;
+		}
+
+		${LineThroughLeft} {
+			left: 525px;
+		}
+
+		${LineThroughRight} {
+			right: 525px;
+		}
+	}
+
+	@media screen and (max-width: 1450px) {
+		${LandingProjectsWrapper} {
+			width: 95%;
+			gap: 0;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(5, auto);
+			grid-template-areas:
+				'image-name-wrapper-1'
+				'article-wrapper-1'
+				'image-name-wrapper-2'
+				'article-wrapper-2'
+				'image-name-wrapper-3';
+		}
+
+		${LineThroughLeft} {
+			top: 12.5%;
+			height: 75%;
+			left: 50%;
+		}
+
+		${LineThroughRight}, ${ImageWrapper1}, ${ImageWrapper2} {
+			display: none;
+		}
+
+		${Image} {
+			width: 400px;
+			height: 400px;
+		}
+
+		${ImageNameWrapper} {
+			display: flex;
+			justify-content: center;
+		}
+
+		${NameHeading} {
+			position: absolute;
+			padding: 10px 0;
+			border-radius: 5px;
+			width: 400px;
+			text-align: center;
+			${({ theme }: ThemeProps) => css`
+				background-color: ${theme.colors.light300};
+			`}
+		}
+
+		${ArticleWrapper} {
+			height: 100%;
+			width: 375px;
+			margin: auto;
+			padding: 25px;
+		}
+
+		${MobileBackground} {
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		${Image} {
+			width: 300px;
+			height: 300px;
+		}
+
+		${NameHeading} {
+			width: 300px;
+			font-size: 4.5rem;
+		}
+
+		${MobileBackground} {
+			width: 275px;
+		}
+
+		${ArticleWrapper} {
+			width: 275px;
+		}
+	}
 `

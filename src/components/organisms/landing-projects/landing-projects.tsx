@@ -16,6 +16,7 @@ import {
 	ProjectsBackground,
 	LineThroughLeft,
 	LineThroughRight,
+	MobileBackground,
 } from './landing-projects.styles'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
@@ -25,6 +26,7 @@ export const LandingProjects = () => (
 		<LandingProjectsWrapper>
 			<LineThroughLeft />
 			<LineThroughRight />
+			<MobileBackground />
 			<ImageNameWrapper1>
 				<NameHeading>Biura</NameHeading>
 				<Image path="project3.jpg" />
