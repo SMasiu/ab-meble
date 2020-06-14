@@ -138,7 +138,7 @@ export const WelcomeArticleOuterWrapper = styled.div`
 export const WelcomeWrapper = styled.section`
 	height: 100vh;
 	min-height: 900px;
-	background-image: url('/welcome.jpg');
+	background-image: url('welcome.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;

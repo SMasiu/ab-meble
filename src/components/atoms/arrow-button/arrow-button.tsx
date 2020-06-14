@@ -8,6 +8,6 @@ interface ArrowButtonProps {
 
 export const ArrowButton: React.FC<ArrowButtonProps> = ({ name, size }) => (
 	<ArrowButtonWrapper size={size}>
-		<img src={`/${name || 'arrow'}.svg`} alt="arrow" />
+		<img src={`${name || 'arrow'}.svg`} alt="arrow" />
 	</ArrowButtonWrapper>
 )

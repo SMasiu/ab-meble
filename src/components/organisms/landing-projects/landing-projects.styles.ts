@@ -72,7 +72,7 @@ export const ProjectsBackgroundWrapper = styled.div`
 export const ProjectsBackground = styled.section`
 	height: 100%;
 	background-attachment: fixed;
-	background-image: url('/projects-cover.jpg');
+	background-image: url('projects-cover.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
