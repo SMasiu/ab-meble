@@ -1,31 +1,19 @@
 import React from 'react'
 import { NavbarWrapper, NavbarLink, NavbarItem } from './navbar.styles'
+import { NavbarItems } from 'types/navbar.types'
 
-export const Navbar: React.FC = () => {
-	const navbarItems = [
-		{
-			name: 'Home',
-		},
-		{
-			name: 'Projekty',
-		},
-		{
-			name: 'Galeria',
-		},
-		{
-			name: 'Kontakt',
-		},
-	]
-
-	return (
-		<nav>
-			<NavbarWrapper>
-				{navbarItems.map(({ name }, i) => (
-					<NavbarItem key={i}>
-						<NavbarLink>{name}</NavbarLink>
-					</NavbarItem>
-				))}
-			</NavbarWrapper>
-		</nav>
-	)
+interface NavbarProps {
+	items: NavbarItems
 }
+
+export const Navbar: React.FC<NavbarProps> = ({items}) => (
+	<nav>
+		<NavbarWrapper>
+			{items.map(({ name }, i) => (
+				<NavbarItem key={i}>
+					<NavbarLink>{name}</NavbarLink>
+				</NavbarItem>
+			))}
+		</NavbarWrapper>
+	</nav>
+)

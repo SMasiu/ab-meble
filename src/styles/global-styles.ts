@@ -45,5 +45,13 @@ export const GlobalStyles = createGlobalStyle`
 			textarea {
 				font-family: 'Montserrat', sans-serif;
 			}
+
+			.no-scroll {
+				overflow-y: hidden;
+
+				&::-webkit-scrollbar {
+					width: 0;
+				}
+			}
 		`}
 `

@@ -11,11 +11,34 @@ import {
 import { HamburgerMenu } from 'components/atoms/hamburger-menu/hamburger-menu'
 import { ExpandNav } from 'components/molecules/expand-nav/expand-nav'
 import { useScrollNav } from 'hooks/use-scroll-nav'
+import { NavbarItems } from 'types/navbar.types'
 
 export const Header: React.FC = () => {
 	const [openMenu, setOpenMenu] = useState(false)
 	const expandedNav = useScrollNav()
-	const hangleHabmurgerClick = () => setOpenMenu(!openMenu)
+	const hangleHabmurgerClick = () => {
+		
+		let className = 'no-scroll'
+		let elem = document.body
+		
+		openMenu ? elem.classList.remove(className) : elem.classList.add(className)
+		setOpenMenu(!openMenu)
+	}
+
+	const navbarItems: NavbarItems = [
+		{
+			name: 'Home',
+		},
+		{
+			name: 'Projekty',
+		},
+		{
+			name: 'Galeria',
+		},
+		{
+			name: 'Kontakt',
+		},
+	]
 
 	return (
 		<HeaderWrapper expandedNav={expandedNav}>
@@ -24,13 +47,13 @@ export const Header: React.FC = () => {
 			</LogoWrapper>
 			<HeaderNavWrapper>
 				<NavbarWrapper>
-					<Navbar />
+					<Navbar items={navbarItems}/>
 				</NavbarWrapper>
 				<HeaderHamburgerWrapper>
 					<HamburgerMenu onClick={hangleHabmurgerClick} open={openMenu} />
 				</HeaderHamburgerWrapper>
 			</HeaderNavWrapper>
-			<ExpandNav open={openMenu} />
+			<ExpandNav open={openMenu} items={navbarItems}/>
 		</HeaderWrapper>
 	)
 }

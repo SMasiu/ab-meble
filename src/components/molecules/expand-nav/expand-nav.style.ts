@@ -26,3 +26,36 @@ export const ExpandNavWrapper = styled.section`
 			transform: translateX(0);
 		`}
 `
+
+export const ExpandNavContainer = styled.nav`
+	height: 100%;
+`
+
+export const ExpandNavItemsWrapper = styled.ul`
+	list-style-type: none;
+	height: 100%;
+	padding: 100px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+`
+
+export const ExpandNavItem = styled.li`
+	text-align: center;
+	width: 100%;
+`
+
+export const ExpandNavLink = styled.a`
+	display: block;
+	padding: 25px 0;
+	cursor: pointer;
+	transition: background-color .2s;
+	will-change: background-color;
+	${({ theme }: ThemeProps) => css`
+		font-size: ${theme.fontSizes.extraLarge};
+		&:hover {
+			background-color: ${theme.colors.light300};
+		}
+	`}
+
+`

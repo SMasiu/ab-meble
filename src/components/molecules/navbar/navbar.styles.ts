@@ -9,7 +9,9 @@ export const NavbarWrapper = styled.ul`
 export const NavbarItem = styled.li``
 
 export const NavbarLink = styled.a`
-	padding: 20px 30px;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
 	${({ theme }: ThemeProps) => css`
 		font-size: ${theme.fontSizes.large};
 	`}
