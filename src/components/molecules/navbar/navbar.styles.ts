@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
+import { Link } from 'gatsby'
 
 export const NavbarWrapper = styled.ul`
 	list-style-type: none;
@@ -8,7 +9,7 @@ export const NavbarWrapper = styled.ul`
 
 export const NavbarItem = styled.li``
 
-export const NavbarLink = styled.a`
+export const NavbarLink = styled(Link)`
 	padding: 10px 30px;
 	cursor: pointer;
 	display: block;

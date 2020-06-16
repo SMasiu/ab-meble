@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
+import { Link } from 'gatsby'
 
 type ExpandNavWrapperProps = {
 	open: boolean
@@ -45,11 +46,11 @@ export const ExpandNavItem = styled.li`
 	width: 100%;
 `
 
-export const ExpandNavLink = styled.a`
+export const ExpandNavLink = styled(Link)`
 	display: block;
 	padding: 25px 0;
 	cursor: pointer;
-	transition: background-color .2s;
+	transition: background-color 0.2s;
 	will-change: background-color;
 	${({ theme }: ThemeProps) => css`
 		font-size: ${theme.fontSizes.extraLarge};
@@ -57,5 +58,4 @@ export const ExpandNavLink = styled.a`
 			background-color: ${theme.colors.light300};
 		}
 	`}
-
 `

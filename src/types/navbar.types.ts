@@ -1,5 +1,6 @@
 export interface NavbarItem {
-    name: string
+	name: string
+	to: string
 }
 
 export type NavbarItems = NavbarItem[]

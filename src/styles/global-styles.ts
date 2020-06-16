@@ -46,6 +46,11 @@ export const GlobalStyles = createGlobalStyle`
 				font-family: 'Montserrat', sans-serif;
 			}
 
+			a {
+				color: ${theme.colors.dark300};
+				text-decoration: none;
+			}
+
 			.no-scroll {
 				overflow-y: hidden;
 

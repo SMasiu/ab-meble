@@ -6,12 +6,12 @@ interface NavbarProps {
 	items: NavbarItems
 }
 
-export const Navbar: React.FC<NavbarProps> = ({items}) => (
+export const Navbar: React.FC<NavbarProps> = ({ items }) => (
 	<nav>
 		<NavbarWrapper>
-			{items.map(({ name }, i) => (
+			{items.map(({ name, to }, i) => (
 				<NavbarItem key={i}>
-					<NavbarLink>{name}</NavbarLink>
+					<NavbarLink to={to}>{name}</NavbarLink>
 				</NavbarItem>
 			))}
 		</NavbarWrapper>

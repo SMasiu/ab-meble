@@ -17,10 +17,9 @@ export const Header: React.FC = () => {
 	const [openMenu, setOpenMenu] = useState(false)
 	const expandedNav = useScrollNav()
 	const hangleHabmurgerClick = () => {
-		
 		let className = 'no-scroll'
 		let elem = document.body
-		
+
 		openMenu ? elem.classList.remove(className) : elem.classList.add(className)
 		setOpenMenu(!openMenu)
 	}
@@ -28,15 +27,23 @@ export const Header: React.FC = () => {
 	const navbarItems: NavbarItems = [
 		{
 			name: 'Home',
+			to: '/',
 		},
 		{
 			name: 'Projekty',
+			to: '/projekty',
+		},
+		{
+			name: 'Realizacje',
+			to: '/realizacje',
 		},
 		{
 			name: 'Galeria',
+			to: '/galeria',
 		},
 		{
 			name: 'Kontakt',
+			to: '/',
 		},
 	]
 
@@ -47,13 +54,13 @@ export const Header: React.FC = () => {
 			</LogoWrapper>
 			<HeaderNavWrapper>
 				<NavbarWrapper>
-					<Navbar items={navbarItems}/>
+					<Navbar items={navbarItems} />
 				</NavbarWrapper>
 				<HeaderHamburgerWrapper>
 					<HamburgerMenu onClick={hangleHabmurgerClick} open={openMenu} />
 				</HeaderHamburgerWrapper>
 			</HeaderNavWrapper>
-			<ExpandNav open={openMenu} items={navbarItems}/>
+			<ExpandNav open={openMenu} items={navbarItems} />
 		</HeaderWrapper>
 	)
 }
