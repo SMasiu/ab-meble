@@ -11,6 +11,7 @@ import { GlobalStyles } from 'styles/global-styles'
 import { ThemeProvider } from 'styled-components'
 import { theme } from 'styles/theme'
 import { Footer } from 'components/organisms/footer/footer'
+import { PageContentWrapper } from './layout.styles'
 
 interface LayoutProps {
 	children: React.ReactNode
@@ -22,8 +23,10 @@ const Layout = ({ children }: LayoutProps) => {
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
 				<Header />
-				<main>{children}</main>
-				<Footer />
+				<PageContentWrapper>
+					<main>{children}</main>
+					<Footer />
+				</PageContentWrapper>
 			</ThemeProvider>
 		</div>
 	)
