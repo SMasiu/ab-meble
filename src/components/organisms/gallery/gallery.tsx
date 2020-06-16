@@ -1,6 +1,6 @@
 import React from 'react'
 import { GalleryImagesQueryResponse } from 'types/gallery.types'
-import { GalleryWrapper, GalleryImage } from './gallery'
+import { GalleryWrapper, GalleryImage } from './gallery.style'
 
 interface GalleryProps {
 	data: GalleryImagesQueryResponse

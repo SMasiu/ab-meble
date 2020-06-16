@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from 'components/templates/layout/layout'
 import SEO from 'components/templates/seo/seo'
-import { Gallery } from 'components/organisms/gallery/gallery'
 import { graphql } from 'gatsby'
 import { GalleryImagesQueryResponse } from 'types/gallery.types'
+import { Gallery } from 'components/organisms/gallery/gallery'
 
 interface GalleryProps {
 	data: GalleryImagesQueryResponse
