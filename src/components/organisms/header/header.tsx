@@ -30,16 +30,12 @@ export const Header: React.FC = () => {
 			to: '/',
 		},
 		{
-			name: 'Projekty',
-			to: '/projekty',
+			name: 'Referencje',
+			to: '/referencje',
 		},
 		{
 			name: 'Realizacje',
 			to: '/realizacje',
-		},
-		{
-			name: 'Galeria',
-			to: '/galeria',
 		},
 		{
 			name: 'Kontakt',

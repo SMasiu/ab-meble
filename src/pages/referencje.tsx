@@ -2,10 +2,10 @@ import React from 'react'
 import Layout from 'components/templates/layout/layout'
 import SEO from 'components/templates/seo/seo'
 
-const Projects = () => (
+const References = () => (
 	<Layout>
-		<SEO title="Projekty" />
+		<SEO title="Referencje" />
 	</Layout>
 )
 
-export default Projects
+export default References
