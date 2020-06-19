@@ -8,6 +8,7 @@ type ReferenceWrapperProps = {
 export const ReferenceWrapper = styled.section<ReferenceWrapperProps>`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	padding: 50px 0;
 
 	${({ index }: ReferenceWrapperProps) =>
 		index % 2 !== 0 &&
@@ -24,6 +25,37 @@ export const ReferenceWrapper = styled.section<ReferenceWrapperProps>`
 		`}
 `
 
-export const ReferenceImageWrapper = styled.figure``
+export const ReferenceImageWrapper = styled.section`
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+`
 
-export const ReferenceArticleWrapper = styled.article``
+export const ReferenceImageContainer = styled.figure`
+	width: 500px;
+`
+
+export const ReferenceArticleWrapper = styled.article`
+	padding: 50px;
+	${({ theme }: ThemeProps) => css`
+		background-color: ${theme.colors.light200};
+	`}
+`
+
+export const ArticleHeader = styled.header`
+	display: flex;
+	align-items: center;
+`
+
+export const ArticleLogoWrapper = styled.figure`
+	margin-bottom: -4px;
+`
+
+export const ArticleLogo = styled.img`
+	width: auto;
+	height: 50px;
+`
+
+export const HeaderName = styled.h2`
+	font-family: 'Comfortaa', cursive;
+`

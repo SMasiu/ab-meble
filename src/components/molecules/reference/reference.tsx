@@ -3,6 +3,11 @@ import {
 	ReferenceImageWrapper,
 	ReferenceArticleWrapper,
 	ReferenceWrapper,
+	ReferenceImageContainer,
+	ArticleHeader,
+	ArticleLogoWrapper,
+	ArticleLogo,
+	HeaderName,
 } from './reference.style'
 import { Refs } from 'types/references.type'
 
@@ -12,13 +17,23 @@ interface ReferenceProps {
 }
 
 export const Reference: React.FC<ReferenceProps> = ({
-	reference: { imagePath },
+	reference: { imagePath, companyLogoPath, companyName, quotation },
 	index,
 }) => (
 	<ReferenceWrapper index={index}>
 		<ReferenceImageWrapper>
-			<img src={imagePath} alt="Referencja" />
+			<ReferenceImageContainer>
+				<img src={imagePath} alt="Referencja" />
+			</ReferenceImageContainer>
 		</ReferenceImageWrapper>
-		<ReferenceArticleWrapper>article</ReferenceArticleWrapper>
+		<ReferenceArticleWrapper>
+			<ArticleHeader>
+				<ArticleLogoWrapper>
+					<ArticleLogo src={companyLogoPath} alt="company logo" />
+				</ArticleLogoWrapper>
+				<HeaderName>{companyName}</HeaderName>
+			</ArticleHeader>
+			<p>{quotation}</p>
+		</ReferenceArticleWrapper>
 	</ReferenceWrapper>
 )
