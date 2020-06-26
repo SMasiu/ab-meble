@@ -8,6 +8,8 @@ export const FooterOuterWrapper = styled.footer`
 	align-items: center;
 	justify-content: stretch;
 	padding: 70px 50px 35px 50px;
+	transform: translatez(0);
+	-webkit-transform: translatez(0);
 
 	${({ theme }: ThemeProps) => css`
 		background-color: ${theme.colors.light300};

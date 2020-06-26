@@ -3,4 +3,5 @@ export interface Refs {
 	companyName: string
 	companyLogoPath: string
 	quotation: string
+	projectImagePath: string
 }
