@@ -48,6 +48,7 @@ export const ReferenceImageWrapper = styled.section`
 
 export const ReferenceImageContainer = styled.figure`
 	width: 500px;
+	margin-bottom: -4px;
 `
 
 export const ReferenceArticleWrapper = styled.article`

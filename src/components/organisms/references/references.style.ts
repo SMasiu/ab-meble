@@ -11,6 +11,6 @@ export const ReferencesWrapper = styled.section`
 	-webkit-transform: translatez(0);
 
 	& > * {
-		margin: 100px 50px;
+		margin: 100px 100px;
 	}
 `
