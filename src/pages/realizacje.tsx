@@ -1,11 +1,13 @@
 import React from 'react'
 import Layout from 'components/templates/layout/layout'
 import SEO from 'components/templates/seo/seo'
+import { Realizations } from 'components/organisms/realizations/realizantions'
 
-const Realizations = () => (
+const RealizationsPage = () => (
 	<Layout>
 		<SEO title="Realizacje"></SEO>
+		<Realizations />
 	</Layout>
 )
 
-export default Realizations
+export default RealizationsPage
