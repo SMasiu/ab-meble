@@ -9,23 +9,34 @@ type ImageWrapperProps = {
 	imageUrl: string
 } & ThemeProps
 
+type ImageBackgroundProps = {
+	imageUrl: string
+} & ThemeProps
+
+export const RealizationOuterWrapper = styled.div`
+	position: relative;
+`
+
 export const RealizationImages = styled.section`
 	position: relative;
 `
 
 export const RealizationAbout = styled.section`
+	position: relative;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	transform: translateY(-150px);
 `
 
 export const RealizationHeader = styled.header`
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	font-size: 2.2rem;
 `
 
 export const RealizationHeaderText = styled.h2`
 	font-family: 'Comfortaa', cursive;
+	text-align: center;
 `
 
 export const RealizationAboutText = styled.p``
@@ -66,12 +77,27 @@ export const ImageWrapper3 = styled(ImageWrapper)`
 	transform: translate(-50%, -30%);
 `
 
+export const ImageBackground = styled.figure<ImageBackgroundProps>`
+	height: 450px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 0% 80%;
+	${({ imageUrl }: ImageBackgroundProps) => css`
+		background-image: url(${imageUrl});
+	`}
+`
+
 export const RealizationWrapper = styled.aside<RealizationWrapperProps>`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	min-height: 900px;
 	height: 100vh;
 	gap: 50px;
+	width: 1400px;
+	margin: auto;
 	${({ index }: RealizationWrapperProps) =>
 		index % 2 === 1 &&
 		css`
@@ -95,4 +121,19 @@ export const RealizationWrapper = styled.aside<RealizationWrapperProps>`
 				grid-row: 1;
 			}
 		`};
+`
+
+export const ArrowDownWrapper = styled.figure`
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	background-image: url('arrow-down.svg');
+	animation: arrow-motion;
+	animation-iteration-count: infinite;
+	animation-duration: .8s;
+	border-radius: 50%;
 `

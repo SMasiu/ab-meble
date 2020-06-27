@@ -58,5 +58,11 @@ export const GlobalStyles = createGlobalStyle`
 					width: 0;
 				}
 			}
+
+			@keyframes arrow-motion {
+				0% { background-position-y: 0; }
+				100% { background-position-y: 30px; }
+			}
 		`}
 `
+
