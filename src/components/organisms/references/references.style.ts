@@ -13,4 +13,16 @@ export const ReferencesWrapper = styled.section`
 	& > * {
 		margin: 100px 100px;
 	}
+
+	@media screen and (max-width: 800px) {
+		& > * {
+			margin: 50px 25px;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		& > * {
+			margin: 25px 10px;
+		}
+	}
 `

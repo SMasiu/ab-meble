@@ -133,6 +133,21 @@ export const WelcomeArticleOuterWrapper = styled.div`
 			font-size: 3rem;
 		}
 	}
+
+	@media screen and (max-width: 400px) {
+		${HeaderWrapper} {
+			width: 250px;
+			height: 250px;
+		}
+
+		${Heading} {
+			font-size: 4rem;
+		}
+
+		${SubHeading} {
+			font-size: 2rem;
+		}
+	}
 `
 
 export const WelcomeWrapper = styled.section`

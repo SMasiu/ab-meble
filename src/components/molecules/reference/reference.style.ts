@@ -9,35 +9,6 @@ type ArticleProjectImageProps = {
 	url: string
 } & ThemeProps
 
-export const ReferenceWrapper = styled.section<ReferenceWrapperProps>`
-	display: grid;
-	padding: 25px;
-	grid-template-columns: 500px 1fr;
-	${({ theme }: ReferenceWrapperProps) => css`
-		background-color: ${theme.colors.light100};
-	`}
-
-	${({ index }: ReferenceWrapperProps) =>
-		index % 2 !== 0 &&
-		css`
-			grid-template-columns: 1fr 500px;
-			${ReferenceImageWrapper} {
-				grid-column: 2;
-				grid-row: 1;
-			}
-
-			${ReferenceArticleWrapper} {
-				grid-column: 1;
-				grid-row: 1;
-
-				${ArticleLogoWrapper} {
-					right: -50px !important;
-					left: auto !important;
-				}
-			}
-		`}
-`
-
 export const ReferenceImageWrapper = styled.section`
 	display: flex;
 	justify-content: center;
@@ -111,4 +82,78 @@ export const ArticleProjectImage = styled.figure<ArticleProjectImageProps>`
 		background-image: url(${url});
 		border: 4px solid ${theme.colors.light300};
 	`}
+`
+
+export const ReferenceWrapper = styled.section<ReferenceWrapperProps>`
+	display: grid;
+	padding: 25px;
+	grid-template-columns: 500px 1fr;
+	${({ theme }: ReferenceWrapperProps) => css`
+		background-color: ${theme.colors.light100};
+	`}
+
+	${({ index }: ReferenceWrapperProps) =>
+		index % 2 !== 0 &&
+		css`
+			grid-template-columns: 1fr 500px;
+			${ReferenceImageWrapper} {
+				grid-column: 2;
+				grid-row: 1;
+			}
+
+			${ReferenceArticleWrapper} {
+				grid-column: 1;
+				grid-row: 1;
+
+				${ArticleLogoWrapper} {
+					right: -50px !important;
+					left: auto !important;
+				}
+			}
+		`}
+
+	@media screen and (max-width: 1400px) {
+		grid-template-columns: 1fr;
+
+		${ReferenceImageWrapper} {
+			grid-column: 1;
+			grid-row: 2;
+			border: none;
+		}
+
+		${ReferenceArticleWrapper} {
+			grid-column: 1;
+			grid-row: 1;
+		}
+
+		${ArticleProjectImage} {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		${ReferenceImageContainer} {
+			width: 100%;
+		}
+
+		${ReferenceArticleWrapper} {
+			padding: 0 0 50px 0;
+		}
+
+		${ArticleLogoWrapper} {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		padding: 15px;
+
+		${ReferenceArticleWrapper} {
+			padding: 0 0 25px 0;
+		}
+
+		${ArticleHeader} {
+			height: 100px;
+		}
+	}
 `
