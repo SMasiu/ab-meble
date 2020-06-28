@@ -40,12 +40,5 @@ module.exports = {
 				display: 'swap',
 			},
 		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `gallery`,
-				path: `${__dirname}/gallery`,
-			},
-		},
 	],
 }
