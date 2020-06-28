@@ -12,7 +12,7 @@ import {
 	ImageWrapper2,
 	ImageWrapper3,
 	ImageBackground,
-	ArrowDownWrapper
+	ArrowDownWrapper,
 } from './realization.style'
 
 interface RealizationProps {
@@ -22,26 +22,26 @@ interface RealizationProps {
 }
 
 export const Realization: React.FC<RealizationProps> = ({
-	realization: { header, paragraph, image1, image2, image3 },
+	realization: { header, paragraph, image1, image2, image3, imageBackground },
 	index,
-	arrow
+	arrow,
 }) => (
-		<RealizationOuterWrapper>
-			{console.log(arrow)}
-			<ImageBackground imageUrl={image1} />
-			<RealizationWrapper index={index}>
-				<RealizationImages>
-					<ImageWrapper1 imageUrl={image1} />
-					{image2 && <ImageWrapper2 imageUrl={image2} />}
-					{image3 && <ImageWrapper3 imageUrl={image3} />}
-				</RealizationImages>
-				<RealizationAbout>
-					<RealizationHeader>
-						<RealizationHeaderText>{header}</RealizationHeaderText>
-					</RealizationHeader>
-					<RealizationAboutText>{paragraph}</RealizationAboutText>
-				</RealizationAbout>
-			</RealizationWrapper>
-			{arrow && <ArrowDownWrapper />}
-		</RealizationOuterWrapper>
-	)
+	<RealizationOuterWrapper>
+		{console.log(arrow)}
+		<ImageBackground imageUrl={imageBackground} />
+		<RealizationWrapper index={index}>
+			<RealizationImages>
+				<ImageWrapper1 imageUrl={image1} />
+				{image2 && <ImageWrapper2 imageUrl={image2} />}
+				{image3 && <ImageWrapper3 imageUrl={image3} />}
+			</RealizationImages>
+			<RealizationAbout>
+				<RealizationHeader>
+					<RealizationHeaderText>{header}</RealizationHeaderText>
+				</RealizationHeader>
+				<RealizationAboutText>{paragraph}</RealizationAboutText>
+			</RealizationAbout>
+		</RealizationWrapper>
+		{arrow && <ArrowDownWrapper />}
+	</RealizationOuterWrapper>
+)
