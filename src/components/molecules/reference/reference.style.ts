@@ -58,6 +58,7 @@ export const ArticleLogo = styled.img`
 
 export const HeaderName = styled.h2`
 	font-family: 'Comfortaa', cursive;
+	text-align: center;
 `
 
 export const ArticleText = styled.p`
