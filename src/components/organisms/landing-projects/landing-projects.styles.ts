@@ -17,8 +17,8 @@ export const LandingProjectsWrapper = styled.div`
 	grid-template-rows: repeat(3, minmax(400px, 1fr));
 	grid-template-areas:
 		'image-name-wrapper-1 image-wrapper-1 article-wrapper-1'
-		'image-name-wrapper-2 . .'
-		'image-name-wrapper-3 image-wrapper-2 article-wrapper-2';
+		'image-name-wrapper-2 . article-wrapper-2'
+		'image-name-wrapper-3 image-wrapper-2 article-wrapper-3';
 `
 
 export const ImageNameWrapper = styled.section`
@@ -31,7 +31,12 @@ export const ImageNameWrapper = styled.section`
 `
 
 export const NameHeading = styled.h2`
-	font-size: 6rem;
+	font-size: 4rem;
+	font-family: 'Comfortaa', cursive;
+`
+
+export const NameSubHeading = styled.h3`
+	font-size: 2rem;
 	font-family: 'Comfortaa', cursive;
 `
 
@@ -75,6 +80,10 @@ export const ArticleWrapper1 = styled(ArticleWrapper)`
 
 export const ArticleWrapper2 = styled(ArticleWrapper)`
 	grid-area: article-wrapper-2;
+`
+
+export const ArticleWrapper3 = styled(ArticleWrapper)`
+	grid-area: article-wrapper-3;
 `
 
 export const Image = styled.figure<ImageProps>`
@@ -186,7 +195,7 @@ export const LandingProjectsOuterWrapper = styled.section`
 			width: 95%;
 			gap: 0;
 			grid-template-columns: 1fr;
-			grid-template-rows: repeat(5, auto);
+			grid-template-rows: repeat(6, auto);
 			grid-template-areas:
 				'image-name-wrapper-1'
 				'article-wrapper-1'

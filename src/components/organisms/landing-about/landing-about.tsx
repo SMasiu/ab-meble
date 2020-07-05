@@ -7,13 +7,10 @@ import {
 	AboutImage,
 	AboutHeading,
 	AboutParagraph,
-	ReadMore,
-	ReadMoreText,
 } from './landing-about.style'
-import { ArrowButton } from 'components/atoms/arrow-button/arrow-button'
 
 export const LandingAbout = () => (
-	<AboutOuterWrapper>
+	<AboutOuterWrapper id="about-us">
 		<AboutWrapper>
 			<AboutImageWrapper>
 				<AboutImage />
@@ -30,10 +27,6 @@ export const LandingAbout = () => (
 					inventore accusantium quod illo, facilis earum autem saepe magnam ab
 					consequatur facere totam fugit officia. In id repellat vel sint!
 				</AboutParagraph>
-				<ReadMore>
-					<ReadMoreText>Discover</ReadMoreText>
-					<ArrowButton />
-				</ReadMore>
 			</AboutArticleWrapper>
 		</AboutWrapper>
 	</AboutOuterWrapper>

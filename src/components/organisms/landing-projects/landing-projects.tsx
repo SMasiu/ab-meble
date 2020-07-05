@@ -9,6 +9,7 @@ import {
 	ImageWrapper2,
 	ArticleWrapper1,
 	ArticleWrapper2,
+	ArticleWrapper3,
 	NameHeading,
 	Image,
 	ImageContentWrapper1,
@@ -17,6 +18,7 @@ import {
 	LineThroughLeft,
 	LineThroughRight,
 	MobileBackground,
+	NameSubHeading,
 } from './landing-projects.styles'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
@@ -28,15 +30,24 @@ export const LandingProjects = () => (
 			<LineThroughRight />
 			<MobileBackground />
 			<ImageNameWrapper1>
-				<NameHeading>Biura</NameHeading>
+				<div>
+					<NameHeading>Realizacje</NameHeading>
+					<NameSubHeading>wnętrz biurowych</NameSubHeading>
+				</div>
 				<Image path="project3.jpg" />
 			</ImageNameWrapper1>
 			<ImageNameWrapper2>
-				<NameHeading>Domy</NameHeading>
+				<div>
+					<NameHeading>Realizacje</NameHeading>
+					<NameSubHeading>pomieszczeń mieszkalnych</NameSubHeading>
+				</div>
 				<Image path="project4.jpg" />
 			</ImageNameWrapper2>
 			<ImageNameWrapper3>
-				<NameHeading>Salony</NameHeading>
+				<div>
+					<NameHeading>Projektowanie</NameHeading>
+					<NameSubHeading>wnętrz biurowych i mieszkalnych</NameSubHeading>
+				</div>
 				<Image path="project5.jpg" />
 			</ImageNameWrapper3>
 			<ImageWrapper1>
@@ -51,22 +62,34 @@ export const LandingProjects = () => (
 			</ImageWrapper2>
 			<ArticleWrapper1>
 				<WelcomeInfo
-					heading={'Lorem, ipsum dolor.'}
+					heading={'Galeria'}
 					paragraph={
 						'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 					}
 					discover={'Discover'}
+					linkTo={'/realizacje-wnęrz-biurowych'}
 				></WelcomeInfo>
 			</ArticleWrapper1>
 			<ArticleWrapper2>
 				<WelcomeInfo
-					heading={'Lorem, ipsum dolor.'}
+					heading={'Galeria'}
 					paragraph={
 						'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 					}
 					discover={'Discover'}
+					linkTo={'/realizacje-wnętrz-mieszkalnych'}
 				></WelcomeInfo>
 			</ArticleWrapper2>
+			<ArticleWrapper3>
+				<WelcomeInfo
+					heading={'Galeria'}
+					paragraph={
+						'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
+					}
+					discover={'Discover'}
+					linkTo={'/projekty'}
+				></WelcomeInfo>
+			</ArticleWrapper3>
 		</LandingProjectsWrapper>
 	</LandingProjectsOuterWrapper>
 )

@@ -32,18 +32,20 @@ export const LandingWelcome: React.FC = () => (
 						</LetterWrapperA>
 						<InfoSection>
 							<WelcomeInfo
-								heading={'Lorem, ipsum dolor.'}
+								heading={'Produkty biuro'}
 								paragraph={
 									'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 								}
 								discover={'Discover'}
+								linkTo={'/produkty-dom'}
 							></WelcomeInfo>
 							<WelcomeInfo
-								heading={'Lorem, ipsum dolor.'}
+								heading={'Produkty dom'}
 								paragraph={
 									'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 								}
 								discover={'Discover'}
+								linkTo={'/produkty-biuro'}
 							></WelcomeInfo>
 						</InfoSection>
 						<LetterWrapperB>

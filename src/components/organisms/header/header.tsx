@@ -26,25 +26,36 @@ export const Header: React.FC = () => {
 		setOpenMenu(!openMenu)
 	}
 
+	const scrollTo = (elemId: string) => {
+		document.querySelector(elemId)?.scrollIntoView({
+			behavior: 'smooth',
+		})
+	}
+
 	const navbarItems: NavbarItems = [
 		{
-			name: 'Home',
+			name: 'O nas',
+			action: () => scrollTo('#about-us'),
+		},
+		{
+			name: 'Inspiracje',
 			to: '/',
 		},
 		{
-			name: 'Referencje',
-			to: '/referencje',
+			name: 'Produkty',
+			to: '/produkty',
 		},
 		{
 			name: 'Realizacje',
 			to: '/realizacje',
 		},
 		{
+			name: 'Referencje',
+			to: '/referencje',
+		},
+		{
 			name: 'Kontakt',
-			action: () =>
-				document.querySelector('#footer')?.scrollIntoView({
-					behavior: 'smooth',
-				}),
+			action: () => scrollTo('#footer'),
 		},
 	]
 

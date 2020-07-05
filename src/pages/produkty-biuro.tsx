@@ -2,11 +2,11 @@ import React from 'react'
 import Layout from 'components/templates/layout/layout'
 import SEO from 'components/templates/seo/seo'
 
-const RealizationsPage = () => (
+const OfficeProductsPage = () => (
 	<Layout>
-		<SEO title="Realizacje"></SEO>
-		realizacje
+		<SEO title="Produkty biuro"></SEO>
+		produkty producenci
 	</Layout>
 )
 
-export default RealizationsPage
+export default OfficeProductsPage
