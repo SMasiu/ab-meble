@@ -66,7 +66,7 @@ export const LandingProjects = () => (
 					paragraph={
 						'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 					}
-					discover={'Discover'}
+					discover={'Zobacz więcej'}
 					linkTo={'/realizacje-wnęrz-biurowych'}
 				></WelcomeInfo>
 			</ArticleWrapper1>
@@ -76,7 +76,7 @@ export const LandingProjects = () => (
 					paragraph={
 						'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 					}
-					discover={'Discover'}
+					discover={'Zobacz więcej'}
 					linkTo={'/realizacje-wnętrz-mieszkalnych'}
 				></WelcomeInfo>
 			</ArticleWrapper2>
@@ -86,7 +86,7 @@ export const LandingProjects = () => (
 					paragraph={
 						'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 					}
-					discover={'Discover'}
+					discover={'Zobacz więcej'}
 					linkTo={'/projekty'}
 				></WelcomeInfo>
 			</ArticleWrapper3>

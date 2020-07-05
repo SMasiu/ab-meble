@@ -14,7 +14,11 @@ import { useScrollNav } from 'hooks/use-scroll-nav'
 import { NavbarItems } from 'types/navbar.types'
 import { Link } from 'gatsby'
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+	path: string
+}
+
+export const Header: React.FC<HeaderProps> = ({ path }) => {
 	const [openMenu, setOpenMenu] = useState(false)
 	const expandedNav = useScrollNav()
 
@@ -35,11 +39,13 @@ export const Header: React.FC = () => {
 	const navbarItems: NavbarItems = [
 		{
 			name: 'O nas',
+			to: path === '/' ? undefined : '/#about-us',
 			action: () => scrollTo('#about-us'),
 		},
 		{
 			name: 'Inspiracje',
-			to: '/',
+			to: path === '/' ? undefined : '/#inspirations',
+			action: () => scrollTo('#inspirations'),
 		},
 		{
 			name: 'Produkty',

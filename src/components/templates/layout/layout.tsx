@@ -15,14 +15,16 @@ import { PageContentWrapper } from './layout.styles'
 
 interface LayoutProps {
 	children: React.ReactNode
+	path: string
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, path }: LayoutProps) => {
 	return (
 		<div>
+			{console.log(path)}
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
-				<Header />
+				<Header path={path} />
 				<PageContentWrapper>
 					<main>{children}</main>
 					<Footer />

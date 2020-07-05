@@ -36,7 +36,7 @@ export const LandingWelcome: React.FC = () => (
 								paragraph={
 									'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 								}
-								discover={'Discover'}
+								discover={'Zobacz więcej'}
 								linkTo={'/produkty-dom'}
 							></WelcomeInfo>
 							<WelcomeInfo
@@ -44,7 +44,7 @@ export const LandingWelcome: React.FC = () => (
 								paragraph={
 									'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 								}
-								discover={'Discover'}
+								discover={'Zobacz więcej'}
 								linkTo={'/produkty-biuro'}
 							></WelcomeInfo>
 						</InfoSection>
