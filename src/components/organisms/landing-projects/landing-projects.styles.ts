@@ -30,6 +30,8 @@ export const ImageNameWrapper = styled.section`
 	position: relative;
 `
 
+export const NameHeadingWrapper = styled.div``
+
 export const NameHeading = styled.h2`
 	font-size: 4rem;
 	font-family: 'Comfortaa', cursive;
@@ -152,12 +154,12 @@ export const LineThroughRight = styled(LineThrough)`
 
 export const MobileBackground = styled.div`
 	display: none;
-	height: 65%;
-	width: 375px;
+	height: 85%;
+	width: 575px;
 	position: absolute;
-	top: 50%;
+	bottom: 0;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 
 	${({ theme }: ThemeProps) => css`
 		background-color: ${theme.colors.light300 + 'bb'};
@@ -198,9 +200,10 @@ export const LandingProjectsOuterWrapper = styled.section`
 	}
 
 	@media screen and (max-width: 1450px) {
+		height: auto;
 		${LandingProjectsWrapper} {
 			width: 95%;
-			gap: 0;
+			gap: 50px;
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(6, auto);
 			grid-template-areas:
@@ -208,22 +211,17 @@ export const LandingProjectsOuterWrapper = styled.section`
 				'article-wrapper-1'
 				'image-name-wrapper-2'
 				'article-wrapper-2'
-				'image-name-wrapper-3';
+				'image-name-wrapper-3'
+				'article-wrapper-3';
 		}
 
-		${LineThroughLeft} {
-			top: 12.5%;
-			height: 75%;
-			left: 50%;
-		}
-
-		${LineThroughRight}, ${ImageWrapper1}, ${ImageWrapper2} {
+		${LineThroughRight}, ${ImageWrapper1}, ${ImageWrapper2}, ${LineThroughLeft} {
 			display: none;
 		}
 
 		${Image} {
-			width: 400px;
-			height: 400px;
+			width: 600px;
+			height: 600px;
 		}
 
 		${ImageNameWrapper} {
@@ -231,11 +229,11 @@ export const LandingProjectsOuterWrapper = styled.section`
 			justify-content: center;
 		}
 
-		${NameHeading} {
+		${NameHeadingWrapper} {
 			position: absolute;
 			padding: 10px 0;
 			border-radius: 5px;
-			width: 400px;
+			width: 600px;
 			text-align: center;
 			${({ theme }: ThemeProps) => css`
 				background-color: ${theme.colors.light300};
@@ -244,13 +242,48 @@ export const LandingProjectsOuterWrapper = styled.section`
 
 		${ArticleWrapper} {
 			height: 100%;
-			width: 375px;
+			width: 575px;
 			margin: auto;
 			padding: 25px;
 		}
 
 		${MobileBackground} {
 			display: block;
+		}
+
+		${ProjectsBackground1} {
+			top: calc(30% - 150px);
+		}
+
+		${ProjectsBackground2} {
+			bottom: calc(38.25% - 150px);
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		${Image} {
+			width: 400px;
+			height: 400px;
+		}
+
+		${ArticleWrapper} {
+			width: 375px;
+		}
+
+		${NameHeadingWrapper} {
+			width: 400px;
+		}
+
+		${MobileBackground} {
+			width: 400px;
+		}
+
+		${ProjectsBackground1} {
+			top: calc(29.25% - 150px);
+		}
+
+		${ProjectsBackground2} {
+			bottom: calc(39.75% - 150px);
 		}
 	}
 
@@ -260,9 +293,16 @@ export const LandingProjectsOuterWrapper = styled.section`
 			height: 300px;
 		}
 
-		${NameHeading} {
+		${NameHeadingWrapper} {
 			width: 300px;
-			font-size: 4.5rem;
+		}
+
+		${NameHeading} {
+			font-size: 3rem;
+		}
+
+		${NameSubHeading} {
+			font-size: 1.5rem;
 		}
 
 		${MobileBackground} {
@@ -271,6 +311,14 @@ export const LandingProjectsOuterWrapper = styled.section`
 
 		${ArticleWrapper} {
 			width: 275px;
+		}
+
+		${ProjectsBackground1} {
+			top: calc(28.25% - 150px);
+		}
+
+		${ProjectsBackground2} {
+			bottom: calc(41.25% - 150px);
 		}
 	}
 `

@@ -20,6 +20,7 @@ import {
 	LineThroughRight,
 	MobileBackground,
 	NameSubHeading,
+	NameHeadingWrapper,
 } from './landing-projects.styles'
 import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
@@ -32,24 +33,24 @@ export const LandingProjects = () => (
 			<LineThroughRight />
 			<MobileBackground />
 			<ImageNameWrapper1>
-				<div>
+				<NameHeadingWrapper>
 					<NameHeading>Realizacje</NameHeading>
 					<NameSubHeading>wnętrz biurowych</NameSubHeading>
-				</div>
+				</NameHeadingWrapper>
 				<Image path="project3.jpg" />
 			</ImageNameWrapper1>
 			<ImageNameWrapper2>
-				<div>
+				<NameHeadingWrapper>
 					<NameHeading>Realizacje</NameHeading>
 					<NameSubHeading>pomieszczeń mieszkalnych</NameSubHeading>
-				</div>
+				</NameHeadingWrapper>
 				<Image path="project4.jpg" />
 			</ImageNameWrapper2>
 			<ImageNameWrapper3>
-				<div>
+				<NameHeadingWrapper>
 					<NameHeading>Projektowanie</NameHeading>
 					<NameSubHeading>wnętrz biurowych i mieszkalnych</NameSubHeading>
-				</div>
+				</NameHeadingWrapper>
 				<Image path="project5.jpg" />
 			</ImageNameWrapper3>
 			<ImageWrapper1>
