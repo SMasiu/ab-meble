@@ -12,7 +12,7 @@ import {
 import { FooterContactForm } from 'components/molecules/footer-contact-form/footer-contact-form'
 
 export const Footer = () => (
-	<FooterOuterWrapper>
+	<FooterOuterWrapper id="footer">
 		<FooterWrapper>
 			<ContactData>
 				<ContactDataSection>

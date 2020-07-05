@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
 				font-size: ${theme.fontSizes.medium};
 				color: ${theme.colors.dark300};
 				background-color: ${theme.colors.light100};
+				scroll-behavior: smooth;
 
 				&::-webkit-scrollbar-track {
 					border-radius: 10px;
@@ -60,9 +61,12 @@ export const GlobalStyles = createGlobalStyle`
 			}
 
 			@keyframes arrow-motion {
-				0% { background-position-y: 0; }
-				100% { background-position-y: 30px; }
+				0% {
+					background-position-y: 0;
+				}
+				100% {
+					background-position-y: 30px;
+				}
 			}
 		`}
 `
-

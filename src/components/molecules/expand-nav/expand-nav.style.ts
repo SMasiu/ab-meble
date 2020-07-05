@@ -46,7 +46,7 @@ export const ExpandNavItem = styled.li`
 	width: 100%;
 `
 
-export const ExpandNavLink = styled(Link)`
+export const ExpandNavLinkCss = css`
 	display: block;
 	padding: 25px 0;
 	cursor: pointer;
@@ -58,4 +58,12 @@ export const ExpandNavLink = styled(Link)`
 			background-color: ${theme.colors.light300};
 		}
 	`}
+`
+
+export const ExpandNavLink = styled(Link)`
+	${ExpandNavLinkCss}
+`
+
+export const ExpandNavLinkP = styled.p`
+	${ExpandNavLinkCss}
 `

@@ -5,25 +5,36 @@ import {
 	ExpandNavItemsWrapper,
 	ExpandNavItem,
 	ExpandNavLink,
+	ExpandNavLinkP,
 } from './expand-nav.style'
 import { NavbarItems } from 'types/navbar.types'
 
 interface ExpandNavProps {
 	open: boolean
 	items: NavbarItems
+	setOpen: (val: boolean) => void
 }
 
-export const ExpandNav: React.FC<ExpandNavProps> = ({ open, items }) => {
+export const ExpandNav: React.FC<ExpandNavProps> = ({
+	open,
+	items,
+	setOpen,
+}) => {
 	const handleClick = () => {
 		document.body.classList.remove('no-scroll')
+		setOpen(false)
 	}
 	return (
 		<ExpandNavWrapper open={open}>
 			<ExpandNavContainer>
 				<ExpandNavItemsWrapper>
-					{items.map(({ name, to }, i) => (
+					{items.map(({ name, to, action }, i) => (
 						<ExpandNavItem key={i} onClick={handleClick}>
-							<ExpandNavLink to={to}>{name}</ExpandNavLink>
+							{to ? (
+								<ExpandNavLink to={to}>{name}</ExpandNavLink>
+							) : (
+								<ExpandNavLinkP onClick={action}>{name}</ExpandNavLinkP>
+							)}
 						</ExpandNavItem>
 					))}
 				</ExpandNavItemsWrapper>

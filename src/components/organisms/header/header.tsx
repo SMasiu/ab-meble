@@ -12,10 +12,12 @@ import { HamburgerMenu } from 'components/atoms/hamburger-menu/hamburger-menu'
 import { ExpandNav } from 'components/molecules/expand-nav/expand-nav'
 import { useScrollNav } from 'hooks/use-scroll-nav'
 import { NavbarItems } from 'types/navbar.types'
+import { Link } from 'gatsby'
 
 export const Header: React.FC = () => {
 	const [openMenu, setOpenMenu] = useState(false)
 	const expandedNav = useScrollNav()
+
 	const hangleHabmurgerClick = () => {
 		let className = 'no-scroll'
 		let elem = document.body
@@ -39,14 +41,19 @@ export const Header: React.FC = () => {
 		},
 		{
 			name: 'Kontakt',
-			to: '/',
+			action: () =>
+				document.querySelector('#footer')?.scrollIntoView({
+					behavior: 'smooth',
+				}),
 		},
 	]
 
 	return (
 		<HeaderWrapper expandedNav={expandedNav}>
 			<LogoWrapper>
-				<Logo expanded={expandedNav} />
+				<Link to="/">
+					<Logo expanded={expandedNav} />
+				</Link>
 			</LogoWrapper>
 			<HeaderNavWrapper>
 				<NavbarWrapper>
@@ -56,7 +63,7 @@ export const Header: React.FC = () => {
 					<HamburgerMenu onClick={hangleHabmurgerClick} open={openMenu} />
 				</HeaderHamburgerWrapper>
 			</HeaderNavWrapper>
-			<ExpandNav open={openMenu} items={navbarItems} />
+			<ExpandNav open={openMenu} items={navbarItems} setOpen={setOpenMenu} />
 		</HeaderWrapper>
 	)
 }

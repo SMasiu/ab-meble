@@ -17,3 +17,12 @@ export const NavbarLink = styled(Link)`
 		font-size: ${theme.fontSizes.large};
 	`}
 `
+
+export const NavbarLinkP = styled.p`
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	${({ theme }: ThemeProps) => css`
+		font-size: ${theme.fontSizes.large};
+	`}
+`
