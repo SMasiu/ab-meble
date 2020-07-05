@@ -14,7 +14,8 @@ import {
 	Image,
 	ImageContentWrapper1,
 	ImageContentWrapper2,
-	ProjectsBackground,
+	ProjectsBackground1,
+	ProjectsBackground2,
 	LineThroughLeft,
 	LineThroughRight,
 	MobileBackground,
@@ -24,7 +25,8 @@ import { WelcomeInfo } from 'components/molecules/welcome-info/welcome-info'
 
 export const LandingProjects = () => (
 	<LandingProjectsOuterWrapper>
-		<ProjectsBackground />
+		<ProjectsBackground1 />
+		<ProjectsBackground2 />
 		<LandingProjectsWrapper>
 			<LineThroughLeft />
 			<LineThroughRight />

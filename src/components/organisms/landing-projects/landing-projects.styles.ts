@@ -113,13 +113,20 @@ export const ImageContentWrapper2 = styled(ImageContentWrapper)`
 
 export const ProjectsBackground = styled.section`
 	position: absolute;
-	top: calc(50% - 300px);
 	width: 100%;
-	height: 600px;
+	height: 300px;
 	background-image: url('projects-cover.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+`
+
+export const ProjectsBackground1 = styled(ProjectsBackground)`
+	top: calc(32.5% - 150px);
+`
+
+export const ProjectsBackground2 = styled(ProjectsBackground)`
+	bottom: calc(32.5% - 150px);
 `
 
 export const LineThrough = styled.div`
