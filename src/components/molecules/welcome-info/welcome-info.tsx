@@ -1,12 +1,7 @@
 import React from 'react'
-import {
-	WelcomeInfoWrapper,
-	WelcomeInfoHeading,
-	WelcomeInfoFooter,
-	WelcomeInfoArrowWrapper,
-} from './welcome-info.style'
-import { ArrowButton } from 'components/atoms/arrow-button/arrow-button'
+import { WelcomeInfoWrapper, WelcomeInfoHeading } from './welcome-info.style'
 import { Link } from 'gatsby'
+import { ArrowButtonDiscover } from '../arrow-button-discover/arrow-button-discover'
 
 interface WelcomeInfoProps {
 	heading: string
@@ -25,12 +20,7 @@ export const WelcomeInfo: React.FC<WelcomeInfoProps> = ({
 		<WelcomeInfoHeading>{heading}</WelcomeInfoHeading>
 		<p>{paragraph}</p>
 		<Link to={linkTo}>
-			<WelcomeInfoFooter>
-				<p>{discover}</p>
-				<WelcomeInfoArrowWrapper>
-					<ArrowButton />
-				</WelcomeInfoArrowWrapper>
-			</WelcomeInfoFooter>
+			<ArrowButtonDiscover discover={discover} />
 		</Link>
 	</WelcomeInfoWrapper>
 )
