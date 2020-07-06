@@ -78,19 +78,21 @@ export const ArticleProjectImage = styled.figure<ArticleProjectImageProps>`
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: -75px;
-
 	${({ url, theme }: ArticleProjectImageProps) => css`
 		background-image: url(${url});
 		border: 4px solid ${theme.colors.light300};
-	`}
+		box-shadow: 0 2px 4px ${theme.colors.dark300 + '77'};
+	`};
 `
 
 export const ReferenceWrapper = styled.section<ReferenceWrapperProps>`
 	display: grid;
 	padding: 25px;
 	grid-template-columns: 500px 1fr;
+	border-radius: 25px;
 	${({ theme }: ReferenceWrapperProps) => css`
-		background-color: ${theme.colors.light100};
+		background-color: ${theme.colors.light300};
+		box-shadow: 0 2px 4px ${theme.colors.dark300 + '77'};
 	`}
 
 	${({ index }: ReferenceWrapperProps) =>

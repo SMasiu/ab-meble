@@ -25,6 +25,10 @@ export const ImageWrapper = styled.section`
 	height: 500px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	border-radius: 50%;
+	${({ theme }: ThemeProps) => css`
+		border: 6px solid ${theme.colors.light300};
+	`};
 `
 
 export const ImageCoverWrapper = styled.figure<ImageCoverWrapperProps>`

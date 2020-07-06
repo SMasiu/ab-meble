@@ -6,12 +6,12 @@ export const Textarea = styled.textarea`
 	border: none;
 	padding: 10px;
 	${({ theme }: ThemeProps) => css`
-		border: solid 2px ${theme.colors.primary100};
+		border: solid 2px ${theme.colors.dark100};
 		background-color: ${theme.colors.light100};
 		font-size: ${theme.fontSizes.medium};
 		&::placeholder {
 			transition: color 0.2s;
-			color: ${theme.colors.primary300};
+			color: ${theme.colors.dark300};
 		}
 	`}
 
