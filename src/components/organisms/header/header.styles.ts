@@ -40,7 +40,7 @@ export const HeaderHamburgerWrapper = styled.div`
 `
 
 export const NavbarWrapper = styled.div`
-	@media screen and (max-width: 1050px) {
+	@media screen and (max-width: 1100px) {
 		display: none;
 	}
 `
