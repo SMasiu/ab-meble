@@ -70,7 +70,7 @@ export const LandingProjects = () => (
 						'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae?'
 					}
 					discover={'Zobacz więcej'}
-					linkTo={'/realizacje-wnęrz-biurowych'}
+					linkTo={'/realizacje-wnętrz-biurowych'}
 				></WelcomeInfo>
 			</ArticleWrapper1>
 			<ArticleWrapper2>

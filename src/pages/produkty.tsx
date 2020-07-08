@@ -15,12 +15,14 @@ const ProductsPage: React.FC<PageProps> = ({ path }) => (
 					paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
 				quibusdam!`,
 					imageUrl: 'project3.jpg',
+					linkTo: '/produkty-biuro',
 				},
 				second: {
 					header: 'Dom',
 					paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
 				quibusdam!`,
 					imageUrl: 'project1.jpg',
+					linkTo: '/produkty-dom',
 				},
 			}}
 		/>

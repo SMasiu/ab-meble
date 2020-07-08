@@ -12,11 +12,13 @@ import {
 	Header,
 } from './devider.style'
 import { ArrowButtonDiscover } from 'components/molecules/arrow-button-discover/arrow-button-discover'
+import { Link } from 'gatsby'
 
 interface ArticleProps {
 	header: string
 	paragraph: string
 	imageUrl: string
+	linkTo: string
 }
 
 interface DeviderProps {
@@ -39,7 +41,9 @@ export const Devider: React.FC<DeviderProps> = ({
 					<ArticleHeading>{first.header}</ArticleHeading>
 				</ArticleHeader>
 				<ArticleParagraph>{first.paragraph}</ArticleParagraph>
-				<ArrowButtonDiscover discover="Zobacz więcej" />
+				<Link to={second.linkTo}>
+					<ArrowButtonDiscover discover="Zobacz więcej" />
+				</Link>
 			</ArticleWrapper>
 			<ImageWrapper>
 				<Image1Wrapper imageUrl={first.imageUrl} />
@@ -50,7 +54,9 @@ export const Devider: React.FC<DeviderProps> = ({
 					<ArticleHeading>{second.header}</ArticleHeading>
 				</ArticleHeader>
 				<ArticleParagraph>{second.paragraph}</ArticleParagraph>
-				<ArrowButtonDiscover discover="Zobacz więcej" />
+				<Link to={second.linkTo}>
+					<ArrowButtonDiscover discover="Zobacz więcej" />
+				</Link>
 			</ArticleWrapper>
 		</DeviderWrapper>
 	</DeviderOuterWrapper>

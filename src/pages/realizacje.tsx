@@ -15,12 +15,14 @@ const RealizationsPage: React.FC<PageProps> = ({ path }) => (
 					paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
 				quibusdam!`,
 					imageUrl: 'project3.jpg',
+					linkTo: '/realizacje-wnętrz-biurowych',
 				},
 				second: {
 					header: 'Pomieszczeń mieszkalnych',
 					paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
 				quibusdam!`,
 					imageUrl: 'project4.jpg',
+					linkTo: '/realizacje-wnętrz-mieszkalnych',
 				},
 			}}
 		/>
