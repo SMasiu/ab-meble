@@ -34,12 +34,7 @@ export const Realizations = () => {
 	return (
 		<RealizationsWrapper>
 			{realizations.map((r, i) => (
-				<Realization
-					realization={r}
-					key={i}
-					index={i}
-					arrow={realizations.length !== i + 1}
-				/>
+				<Realization realization={r} key={i} index={i} />
 			))}
 		</RealizationsWrapper>
 	)

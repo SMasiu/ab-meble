@@ -41,7 +41,7 @@ export const Devider: React.FC<DeviderProps> = ({
 					<ArticleHeading>{first.header}</ArticleHeading>
 				</ArticleHeader>
 				<ArticleParagraph>{first.paragraph}</ArticleParagraph>
-				<Link to={second.linkTo}>
+				<Link to={first.linkTo}>
 					<ArrowButtonDiscover discover="Zobacz więcej" />
 				</Link>
 			</ArticleWrapper>
