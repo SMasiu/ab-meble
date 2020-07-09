@@ -141,16 +141,51 @@ export const RealizationWrapper = styled.section`
 					grid-template-areas: 'realization-article-wrapper realization-image-wrapper';
 
 					${ImageWrapper2} {
-						right: 200px;
+						right: 20%;
 					}
 
 					${ImageWrapper3} {
-						right: 500px;
+						right: 47.5%;
 					}
 
 					${RealizationArticle} {
 						padding: 100px 200px 100px 100px;
 						right: 125px;
+					}
+
+					@media screen and (max-width: 1920px) {
+						${RealizationArticle} {
+							right: 50px;
+						}
+					}
+
+					@media screen and (max-width: 1550px) {
+						${ImageWrapper1} {
+							left: -50%;
+							top: auto;
+							bottom: 50px;
+							transform: translate(-50%, 0);
+						}
+
+						${RealizationArticle} {
+							right: 0;
+						}
+
+						${ImageWrapper2} {
+							right: 10%;
+						}
+					}
+
+					@media screen and (max-width: 1200px) {
+						${ImageWrapper2} {
+							right: 50% !important;
+							transform: translateX(50%);
+						}
+
+						${ImageWrapper3} {
+							right: 50% !important;
+							transform: translateX(50%);
+						}
 					}
 			  `
 			: css`
@@ -162,11 +197,11 @@ export const RealizationWrapper = styled.section`
 					}
 
 					${ImageWrapper2} {
-						left: 200px;
+						left: 20%;
 					}
 
 					${ImageWrapper3} {
-						left: 500px;
+						left: 47.5%;
 					}
 
 					${RealizationArticle} {
@@ -174,5 +209,155 @@ export const RealizationWrapper = styled.section`
 						right: 50px;
 						left: 125px;
 					}
+
+					@media screen and (max-width: 1920px) {
+						${RealizationArticle} {
+							left: 50px;
+							width: calc(100% - 50px);
+						}
+					}
+
+					@media screen and (max-width: 1550px) {
+						${ImageWrapper1} {
+							right: -50%;
+							top: auto;
+							bottom: 50px;
+							transform: translate(50%, 0);
+						}
+
+						${RealizationArticle} {
+							left: 0;
+						}
+
+						${ImageWrapper2} {
+							left: 10%;
+						}
+					}
+
+					@media screen and (max-width: 1200px) {
+						${ImageWrapper2} {
+							left: 50% !important;
+							transform: translateX(-50%);
+						}
+
+						${ImageWrapper3} {
+							left: 50% !important;
+							transform: translateX(-50%);
+						}
+					}
 			  `}
+
+	@media screen and (max-width: 1920px) {
+		${RealizationArticle} {
+			width: calc(100% - 50px);
+		}
+	}
+
+	@media screen and (max-width: 1550px) {
+		${RealizationArticle} {
+			justify-content: flex-start;
+			padding: 200px 100px;
+			width: 100%;
+		}
+
+		${ArticleWaterMarkText} {
+			font-size: 60vh;
+		}
+
+		${Line} {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		${ArticleWaterMarkText} {
+			display: none;
+		}
+
+		${ImageWrapper1} {
+			width: 350px;
+			height: 350px;
+		}
+
+		${ImageWrapper2} {
+			top: 200px;
+		}
+
+		${ImageWrapper3} {
+			bottom: 150px;
+		}
+	}
+
+	@media screen and (max-width: 1000px) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'realization-article-wrapper'
+			'realization-image-wrapper';
+
+		${ImageWrapper1} {
+			display: none;
+		}
+
+		${RealizationArticle} {
+			padding: 50px 100px;
+			justify-content: center;
+		}
+
+		${ImageWrapper2}, ${ImageWrapper3} {
+			transform: translate(0);
+			bottom: auto;
+			top: -50px;
+		}
+
+		${ImageWrapper2} {
+			right: auto !important;
+			left: 50px !important;
+		}
+
+		${ImageWrapper3} {
+			left: auto !important;
+			right: 50px !important;
+			width: 350px;
+			height: 350px;
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		height: auto;
+		grid-template-rows: minmax(500px, auto) 600px;
+		${ImageWrapper2} {
+			left: 50% !important;
+			transform: translateX(-50%);
+		}
+
+		${ImageWrapper3} {
+			top: auto;
+			bottom: 50px;
+			left: 50% !important;
+			transform: translateX(-50%);
+			width: 300px;
+			height: 300px;
+		}
+
+		${ArrowNext} {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		grid-template-rows: minmax(500px, auto) 500px;
+		${RealizationArticle} {
+			padding: 0 50px;
+		}
+
+		${ImageWrapper2} {
+			width: 300px;
+			height: 300px;
+		}
+
+		${ImageWrapper3} {
+			width: 250px;
+			height: 250px;
+		}
+	}
 `

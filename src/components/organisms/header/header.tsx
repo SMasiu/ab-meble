@@ -21,13 +21,17 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ path }) => {
 	const [openMenu, setOpenMenu] = useState(false)
 	const expandedNav = useScrollNav()
+	const className = 'no-scroll'
 
 	const hangleHabmurgerClick = () => {
-		let className = 'no-scroll'
 		let elem = document.body
 
 		openMenu ? elem.classList.remove(className) : elem.classList.add(className)
 		setOpenMenu(!openMenu)
+	}
+
+	const handleLogoClick = () => {
+		document.body.classList.remove(className)
 	}
 
 	const scrollTo = (elemId: string) => {
@@ -67,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ path }) => {
 
 	return (
 		<HeaderWrapper expandedNav={expandedNav}>
-			<LogoWrapper>
+			<LogoWrapper onClick={handleLogoClick}>
 				<Link to="/">
 					<Logo expanded={expandedNav} />
 				</Link>
