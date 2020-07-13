@@ -30,7 +30,7 @@ export const RealizationArticle = styled.article`
 	flex-direction: column;
 	justify-content: center;
 	${({ theme }: ThemeProps) => css`
-		background-color: ${theme.colors.light100 + 'dd'};
+		background-color: ${theme.colors.light100};
 	`};
 `
 
