@@ -125,10 +125,10 @@ export const RealizationCoversWrapper = styled.section`
 `
 
 export const RealizationCover = styled.figure`
+	background-size: cover;
+	background-position: center;
 	${({ url }: RealizationWrapperCoverProps) => css`
 		background-image: url(${url});
-		background-size: cover;
-		background-position: center;
 	`};
 `
 
@@ -214,6 +214,19 @@ export const RealizationWrapper = styled.section<RealizationWrapperProps>`
 					}
 			  `}
 
+	@media screen and (max-width: 1600px) {
+		${RealizationCoversWrapper} {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'cover1'
+				'cover2';
+		}
+
+		${RealizationCover3} {
+			display: none;
+		}
+	}
+
 	@media screen and (max-width: 1550px) {
 		${RealizationArticle} {
 			justify-content: flex-start;
@@ -247,6 +260,16 @@ export const RealizationWrapper = styled.section<RealizationWrapperProps>`
 			'realization-article-wrapper'
 			'realization-image-wrapper';
 
+		${RealizationCoversWrapper} {
+			width: 100%;
+			height: 50%;
+			top: auto;
+			bottom: 0;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: 'cover1 cover2';
+		}
+
 		${ImageWrapper1} {
 			display: none;
 		}
@@ -259,17 +282,25 @@ export const RealizationWrapper = styled.section<RealizationWrapperProps>`
 
 	@media screen and (max-width: 700px) {
 		height: auto;
-		grid-template-rows: minmax(500px, auto) 600px;
+		grid-template-rows: minmax(500px, auto) 500px;
 
 		${ArrowNext} {
+			display: none;
+		}
+
+		${RealizationCoversWrapper} {
+			grid-template-columns: 1fr;
+			grid-template-areas: 'cover1';
+		}
+
+		${RealizationCover2} {
 			display: none;
 		}
 	}
 
 	@media screen and (max-width: 500px) {
-		grid-template-rows: minmax(500px, auto) 500px;
 		${RealizationArticle} {
-			padding: 0 50px;
+			padding: 0 25px;
 		}
 	}
 `
