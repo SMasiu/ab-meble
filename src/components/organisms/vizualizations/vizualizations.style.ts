@@ -1,17 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
 
-export const VizualizationsWrapper = styled.section`
-	margin: auto;
-	width: 90%;
-	max-width: 1400px;
-	height: 100vh;
-	min-height: 900px;
-	display: grid;
-	grid-template-columns: 2fr 3fr;
-	gap: 50px;
-`
-
 export const VizualizationsHeader = styled.header`
 	font-family: 'Comfortaa', cursive;
 	margin-bottom: 25px;
@@ -81,4 +70,51 @@ export const ImageOffsettedLeft = styled.figure`
 	${({ theme }: ThemeProps) => css`
 		border: solid 25px ${theme.colors.light100};
 	`}
+`
+
+export const VizualizationsWrapper = styled.section`
+	margin: auto;
+	width: 90%;
+	max-width: 1400px;
+	height: 100vh;
+	min-height: 900px;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	gap: 50px;
+
+	@media screen and (max-width: 1200px) {
+		height: auto;
+		grid-template-columns: 1fr;
+		margin-top: 100px;
+
+		${ImagesWrapper} {
+			height: 900px;
+		}
+	}
+
+	@media screen and (max-width: 650px) {
+		${ImagesWrapper} {
+			height: auto;
+			padding: 25px 0;
+		}
+
+		${Image} {
+			background-attachment: scroll;
+			position: static;
+			height: 300px;
+		}
+
+		${ImageOffsettedRiht} {
+			top: 25px;
+		}
+
+		${ImageOffsettedRiht}, ${ImageOffsettedLeft} {
+			height: 300px;
+			border: none;
+			width: 100%;
+			position: static;
+			transform: translate(0);
+			margin-top: 25px;
+		}
+	}
 `
