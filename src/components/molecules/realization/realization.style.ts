@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
 
-type RealizationWrapperProps = {
+type RealizationWrapperCoverProps = {
 	url: string
+}
+
+type RealizationWrapperProps = {
 	index: number
 } & ThemeProps
 
@@ -24,7 +27,7 @@ export const RealizationArticleWrapper = styled.section`
 
 export const RealizationArticle = styled.article`
 	position: absolute;
-	width: 800px;
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -68,7 +71,7 @@ export const ImageWrapper = styled.figure<ImageWrapperProps>`
 	position: absolute;
 	${({ url, theme }: ImageWrapperProps) => css`
 		background-image: url(${url});
-		border: 4px solid ${theme.colors.light300};
+		border: 2px solid ${theme.colors.light300};
 		box-shadow: 0 2px 4px ${theme.colors.dark300 + '66'};
 	`}
 `
@@ -78,18 +81,6 @@ export const ImageWrapper1 = styled(ImageWrapper)`
 	transform: translate(-50%, -50%);
 	width: 400px;
 	height: 400px;
-`
-
-export const ImageWrapper2 = styled(ImageWrapper)`
-	top: 150px;
-	width: 350px;
-	height: 350px;
-`
-
-export const ImageWrapper3 = styled(ImageWrapper)`
-	bottom: 100px;
-	width: 300px;
-	height: 300px;
 `
 
 export const ArrowNext = styled.div`
@@ -105,7 +96,7 @@ export const ArrowNext = styled.div`
 	justify-content: center;
 	${({ theme }: ThemeProps) => css`
 		background-color: ${theme.colors.light100};
-		border: 4px solid ${theme.colors.light300};
+		border: 2px solid ${theme.colors.light300};
 		box-shadow: 0 2px 4px ${theme.colors.dark300 + '66'};
 	`}
 `
@@ -122,41 +113,59 @@ export const Line = styled.div`
 	`}
 `
 
-export const RealizationWrapper = styled.section`
+export const RealizationCoversWrapper = styled.section`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 2px;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50%;
+`
+
+export const RealizationCover = styled.figure`
+	${({ url }: RealizationWrapperCoverProps) => css`
+		background-image: url(${url});
+		background-size: cover;
+		background-position: center;
+	`};
+`
+
+export const RealizationCover1 = styled(RealizationCover)`
+	grid-area: cover1;
+`
+
+export const RealizationCover2 = styled(RealizationCover)`
+	grid-area: cover2;
+`
+
+export const RealizationCover3 = styled(RealizationCover)`
+	grid-area: cover3;
+`
+
+export const RealizationWrapper = styled.section<RealizationWrapperProps>`
 	height: 100vh;
 	min-height: 900px;
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	position: relative;
-	${({ url }: RealizationWrapperProps) => css`
-		background-image: url(${url});
-		background-size: cover;
-		background-position: center;
-	`};
 
 	${({ index }: RealizationWrapperProps) =>
-		index % 2 === 0
+		index % 2 === 1
 			? css`
 					grid-template-areas: 'realization-article-wrapper realization-image-wrapper';
 
-					${ImageWrapper2} {
-						right: 20%;
-					}
-
-					${ImageWrapper3} {
-						right: 47.5%;
+					${RealizationCoversWrapper} {
+						right: 0;
+						grid-template-areas:
+							'cover2 cover1'
+							'cover3 cover1';
 					}
 
 					${RealizationArticle} {
-						padding: 100px 200px 100px 100px;
-						right: 125px;
-					}
-
-					@media screen and (max-width: 1920px) {
-						${RealizationArticle} {
-							right: 50px;
-						}
+						padding: 100px 300px 100px 100px;
 					}
 
 					@media screen and (max-width: 1550px) {
@@ -170,51 +179,25 @@ export const RealizationWrapper = styled.section`
 						${RealizationArticle} {
 							right: 0;
 						}
-
-						${ImageWrapper2} {
-							right: 10%;
-						}
-					}
-
-					@media screen and (max-width: 1200px) {
-						${ImageWrapper2} {
-							right: 50% !important;
-							transform: translateX(50%);
-						}
-
-						${ImageWrapper3} {
-							right: 50% !important;
-							transform: translateX(50%);
-						}
 					}
 			  `
 			: css`
 					grid-template-areas: 'realization-image-wrapper realization-article-wrapper';
+
+					${RealizationCoversWrapper} {
+						left: 0;
+						grid-template-areas:
+							'cover1 cover2'
+							'cover1 cover3';
+					}
 
 					${ImageWrapper1} {
 						right: 0;
 						transform: translate(50%, -50%);
 					}
 
-					${ImageWrapper2} {
-						left: 20%;
-					}
-
-					${ImageWrapper3} {
-						left: 47.5%;
-					}
-
 					${RealizationArticle} {
-						padding: 100px 100px 100px 200px;
-						right: 50px;
-						left: 125px;
-					}
-
-					@media screen and (max-width: 1920px) {
-						${RealizationArticle} {
-							left: 50px;
-							width: calc(100% - 50px);
-						}
+						padding: 100px 100px 100px 300px;
 					}
 
 					@media screen and (max-width: 1550px) {
@@ -228,30 +211,8 @@ export const RealizationWrapper = styled.section`
 						${RealizationArticle} {
 							left: 0;
 						}
-
-						${ImageWrapper2} {
-							left: 10%;
-						}
-					}
-
-					@media screen and (max-width: 1200px) {
-						${ImageWrapper2} {
-							left: 50% !important;
-							transform: translateX(-50%);
-						}
-
-						${ImageWrapper3} {
-							left: 50% !important;
-							transform: translateX(-50%);
-						}
 					}
 			  `}
-
-	@media screen and (max-width: 1920px) {
-		${RealizationArticle} {
-			width: calc(100% - 50px);
-		}
-	}
 
 	@media screen and (max-width: 1550px) {
 		${RealizationArticle} {
@@ -278,14 +239,6 @@ export const RealizationWrapper = styled.section`
 			width: 350px;
 			height: 350px;
 		}
-
-		${ImageWrapper2} {
-			top: 200px;
-		}
-
-		${ImageWrapper3} {
-			bottom: 150px;
-		}
 	}
 
 	@media screen and (max-width: 1000px) {
@@ -302,42 +255,11 @@ export const RealizationWrapper = styled.section`
 			padding: 50px 100px;
 			justify-content: center;
 		}
-
-		${ImageWrapper2}, ${ImageWrapper3} {
-			transform: translate(0);
-			bottom: auto;
-			top: -50px;
-		}
-
-		${ImageWrapper2} {
-			right: auto !important;
-			left: 50px !important;
-		}
-
-		${ImageWrapper3} {
-			left: auto !important;
-			right: 50px !important;
-			width: 350px;
-			height: 350px;
-		}
 	}
 
 	@media screen and (max-width: 700px) {
 		height: auto;
 		grid-template-rows: minmax(500px, auto) 600px;
-		${ImageWrapper2} {
-			left: 50% !important;
-			transform: translateX(-50%);
-		}
-
-		${ImageWrapper3} {
-			top: auto;
-			bottom: 50px;
-			left: 50% !important;
-			transform: translateX(-50%);
-			width: 300px;
-			height: 300px;
-		}
 
 		${ArrowNext} {
 			display: none;
@@ -348,16 +270,6 @@ export const RealizationWrapper = styled.section`
 		grid-template-rows: minmax(500px, auto) 500px;
 		${RealizationArticle} {
 			padding: 0 50px;
-		}
-
-		${ImageWrapper2} {
-			width: 300px;
-			height: 300px;
-		}
-
-		${ImageWrapper3} {
-			width: 250px;
-			height: 250px;
 		}
 	}
 `
