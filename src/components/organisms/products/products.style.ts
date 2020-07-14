@@ -5,15 +5,6 @@ export type ProductItemImageProps = {
 	url: string
 } & ThemeProps
 
-export const ProductsWrapper = styled.section`
-	display: grid;
-	grid-template-columns: 1fr 250px;
-	gap: 50px;
-	margin-top: 50px;
-	max-width: 1600px;
-	margin: 100px auto 25px auto;
-`
-
 export const HeaderCss = css`
 	font-size: 24px;
 	font-family: 'Comfortaa', cursive;
@@ -85,4 +76,61 @@ export const PartnerLogo = styled.figure`
 
 export const PartnerLogoImage = styled.img`
 	width: 100%;
+`
+
+export const ProductsWrapper = styled.section`
+	display: grid;
+	grid-template-columns: 1fr 250px;
+	gap: 50px;
+	margin-top: 50px;
+	max-width: 1600px;
+	width: 90%;
+	margin: 100px auto 25px auto;
+
+	@media screen and (max-width: 1500px) {
+		grid-template-columns: 1fr;
+
+		${PartnersLogoWrapper} {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		${PartnerLogo} {
+			margin: 25px 50px;
+			width: 250px;
+		}
+	}
+
+	@media screen and (max-width: 1050px) {
+		${ProductItemsWrapper} {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		${ProductItem} {
+			grid-template-columns: 1fr;
+			border-radius: 0;
+			padding: 20px 0 0 0;
+		}
+
+		${ProductItemImage} {
+			margin: auto;
+			width: 300px;
+			height: 300px;
+		}
+
+		${PartnerLogo} {
+			margin: 25px 0;
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		${ProductItemImage} {
+			width: 250px;
+			height: 250px;
+		}
+	}
 `
