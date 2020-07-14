@@ -153,7 +153,7 @@ export const RealizationWrapper = styled.section<RealizationWrapperProps>`
 	position: relative;
 
 	${({ index }: RealizationWrapperProps) =>
-		index % 2 === 1
+		index % 2 === 0
 			? css`
 					grid-template-areas: 'realization-article-wrapper realization-image-wrapper';
 

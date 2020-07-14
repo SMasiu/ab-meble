@@ -50,8 +50,6 @@ export const Realization: React.FC<RealizationProps> = ({
 		</RealizationArticleWrapper>
 		<RealizationImageWrapper>
 			<ImageWrapper1 url={image1}></ImageWrapper1>
-			{/* <ImageWrapper2 url={image2}></ImageWrapper2>
-			<ImageWrapper3 url={image3}></ImageWrapper3> */}
 		</RealizationImageWrapper>
 		<ArticleWaterMarkText>AB</ArticleWaterMarkText>
 	</RealizationWrapper>
