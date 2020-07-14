@@ -47,11 +47,6 @@ export const Header: React.FC<HeaderProps> = ({ path }) => {
 			action: () => scrollTo('#about-us'),
 		},
 		{
-			name: 'Inspiracje',
-			to: path === '/' ? undefined : '/#inspirations',
-			action: () => scrollTo('#inspirations'),
-		},
-		{
 			name: 'Produkty',
 			to: '/produkty',
 		},
