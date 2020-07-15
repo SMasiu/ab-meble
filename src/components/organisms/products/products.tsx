@@ -65,7 +65,7 @@ export const products = [
 export const Products = () => (
 	<ProductsWrapper>
 		<OurProductsWrapper>
-			<ProductsHeader>Our products</ProductsHeader>
+			<ProductsHeader>Nasze produkty</ProductsHeader>
 			<ProductItemsWrapper>
 				{products.map((product, i) => (
 					<ProductItem key={i}>
@@ -85,7 +85,7 @@ export const Products = () => (
 			</ProductItemsWrapper>
 		</OurProductsWrapper>
 		<PartnersWrapper>
-			<PartnersLogoHeader>Our partners</PartnersLogoHeader>
+			<PartnersLogoHeader>Nasi dostawcy</PartnersLogoHeader>
 			<PartnersLogoWrapper>
 				{partnersLogo.map(({ path }, i) => (
 					<PartnerLogo key={i}>
