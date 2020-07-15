@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ThemeProps } from 'types/theme.types'
+import BackgroundImage from 'gatsby-background-image'
 
 export const VizualizationsHeader = styled.header`
 	font-family: 'Comfortaa', cursive;
@@ -34,39 +35,42 @@ export const ImagesWrapper = styled.section`
 	`}
 `
 
-export const Image = styled.figure`
+export const ImageCover = styled(BackgroundImage)`
 	height: 100%;
 	background-image: url(project1.jpg);
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+	min-height: 300px;
 `
 
-export const ImageOffsettedRiht = styled.figure`
+export const ImageOffset = styled(BackgroundImage)`
+	background-image: url(project2.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+`
+
+export const ImageWrapperTop = styled.figure`
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 65px;
 	height: 300px;
 	width: 600px;
-	background-image: url(project2.jpg);
-	background-size: cover;
-	background-position: center;
+
 	${({ theme }: ThemeProps) => css`
 		border: solid 25px ${theme.colors.light100};
 	`}
 `
 
-export const ImageOffsettedLeft = styled.figure`
+export const ImageWrapperBottom = styled.figure`
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 25px;
 	height: 350px;
 	width: 600px;
-	background-image: url(project5.jpg);
-	background-size: cover;
-	background-position: center;
 	${({ theme }: ThemeProps) => css`
 		border: solid 25px ${theme.colors.light100};
 	`}
@@ -98,17 +102,11 @@ export const VizualizationsWrapper = styled.section`
 			padding: 25px 0;
 		}
 
-		${Image} {
-			background-attachment: scroll;
-			position: static;
-			height: 300px;
-		}
-
-		${ImageOffsettedRiht} {
+		${ImageWrapperTop} {
 			top: 25px;
 		}
 
-		${ImageOffsettedRiht}, ${ImageOffsettedLeft} {
+		${ImageWrapperTop}, ${ImageWrapperBottom} {
 			height: 300px;
 			border: none;
 			width: 100%;
